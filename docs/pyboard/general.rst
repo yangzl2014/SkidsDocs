@@ -1,4 +1,4 @@
-pyboard基本信息
+trailbreaker基本信息
 =====================================
 
 .. contents::
@@ -6,14 +6,14 @@ pyboard基本信息
 文件系统和sd卡
 ----------------------------
 
-在pyboard中有一个小型内部文件系统(驱动器)，存储在单片机的闪存中, 叫做 ``/flash`` .如果你插入一个
+在trailbreaker中有一个小型内部文件系统(驱动器)，存储在单片机的闪存中, 叫做 ``/flash`` .如果你插入一个
 SD卡，那么叫做 ``/sd`` 。
 
-pyboard启动时，需选择一个文件系统来引导。若无SD卡，则使用内部文件系统 ``/flash`` 作为启动文件系统，否则将使用SD卡 ``/sd`` 。
+trailbreaker启动时，需选择一个文件系统来引导。若无SD卡，则使用内部文件系统 ``/flash`` 作为启动文件系统，否则将使用SD卡 ``/sd`` 。
 启动后，当前路径侧背设为上述中的一个。
 
 如果需要，你可以在Flash新建一个空文件 ``/flash/SKIPSD``，来阻止使用SD卡。
-如果这个文件存在，SD卡会跳过，并且pyboard总会从内置的文件系统启动。（这种情况下，
+如果这个文件存在，SD卡会跳过，并且trailbreaker总会从内置的文件系统启动。（这种情况下，
 SD卡不会被挂载，但是你仍然可以在程序中使用 ``os.mount`` 来挂载）
 
 （注意在老版本的固件中， ``/flash`` 叫做 ``0:/`` ， ``/sd``
@@ -29,7 +29,7 @@ SD卡不会被挂载，但是你仍然可以在程序中使用 ``os.mount`` 来�
 
 启动模式
 ----------
-如果你正常供电，或者按下reset按键，pyboard会启动标准模式：先执行 ``boot.py`` ，
+如果你正常供电，或者按下reset按键，trailbreaker会启动标准模式：先执行 ``boot.py`` ，
 然后配置USB，接着执行 ``main.py`` 
 
 您可通过在启动时按住user按键来改变启动顺序。按住user按键并按住reset案件，由于您继续按住user按键，
@@ -52,10 +52,10 @@ LED闪灯错误
 1. 若红色和绿色LED交替闪烁，则意味着Python脚本（例如：``main.py``）出现故障。使用REPL来debug。
 2. 若4个LED缓慢地重复亮灭，则意味着出现硬故障。这种故障无法修复，您需要进行硬复位。
 
-Windows中Pyboard的使用指南
+Windows中trailbreaker的使用指南
 ----------------------------------------
 
-下面的PDF指南提供了关于在Windows中使用pyboard的信息，包括设置串行提示、使用DFU程序下载新的固件：
+下面的PDF指南提供了关于在Windows中使用trailbreaker的信息，包括设置串行提示、使用DFU程序下载新的固件：
 `PDF guide <http://micropython.org/resources/Micro-Python-Windows-setup.pdf>`__.
 
 .. include:: hardware/index.rst

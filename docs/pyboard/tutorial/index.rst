@@ -1,10 +1,10 @@
 .. _tutorial-index:
 
-pyboard的MicroPython教程
+trailbreaker的MicroPython教程
 ====================================
 
-本教程旨在帮助您开始使用pyboard。
-你需要的只是一个pyboard和一个microUSB数据线来连接你的电脑。
+本教程旨在帮助您开始使用trailbreaker。
+你需要的只是一个trailbreaker和一个microUSB数据线来连接你的电脑。
 如果你是第一次，建议遵循下面的顺序使用教程。
 
 

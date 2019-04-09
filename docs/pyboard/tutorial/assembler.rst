@@ -1,4 +1,4 @@
-.. _pyboard_tutorial_assembler:
+.. _trailbreaker_tutorial_assembler:
 
 内联汇编
 ================
@@ -36,11 +36,11 @@ MicroPython通常将 ``r0`` 解译为一个整数，并为调用方将其转换�
 
 这一代码使用了一些新概念:
 
-  - ``stm`` 是一个为轻松访问pyboard的微控制器的寄存器提供了一系列常量的模块。
+  - ``stm`` 是一个为轻松访问trailbreaker的微控制器的寄存器提供了一系列常量的模块。
     尝试运行``import stm`` ，然后在REPL中
     运行 ``help(stm)`` 。其功能为提供所有可用常量的列表。
 
-  - ``stm.GPIOA`` 是GPIOA外设的地址。在pyboard中，红色LED在端口A、引脚PA13。
+  - ``stm.GPIOA`` 是GPIOA外设的地址。在trailbreaker中，红色LED在端口A、引脚PA13。
 
   - ``movwt`` 将一个32位的数字移入寄存器。
     这是一个可轻松转换为2个thumb指令的函数：先是 ``movw`` ，

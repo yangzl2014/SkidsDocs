@@ -1,7 +1,7 @@
-将pyboard用作USB鼠标
+将trailbreaker用作USB鼠标
 =====================================
 
-Pyboard是一个USB设备，可配置为代替默认USB闪存驱动器的鼠标。
+trailbreaker是一个USB设备，可配置为代替默认USB闪存驱动器的鼠标。
 
 要实现这一功能，首先我们需编辑 ``boot.py`` 文件来改变USB配置。
 若您从未接触过您的 ``boot.py`` 文件，此文件应形似下示::
@@ -23,14 +23,14 @@ Pyboard是一个USB设备，可配置为代替默认USB闪存驱动器的鼠标�
     import pyb
     pyb.usb_mode('VCP+HID')
 
-此代码使pyboard在启动时将自身配置为VCP（虚拟COM端口，即串行端口）和HID（人机接口设备，在我们这种情况下即为鼠标）USB设备。
+此代码使trailbreaker在启动时将自身配置为VCP（虚拟COM端口，即串行端口）和HID（人机接口设备，在我们这种情况下即为鼠标）USB设备。
 
-使用RST开关弹出/卸载pyboard驱动并重置。您的个人电脑现在应扫描到显示为鼠标的pyboard！
+使用RST开关弹出/卸载trailbreaker驱动并重置。您的个人电脑现在应扫描到显示为鼠标的trailbreaker！
 
 手动发送鼠标事件
 ----------------------------
 
-要使py-mouse正常工作，我们需要向个人电脑发送鼠标事件。首先我们使用REPL提示符手动进行。使用串行程序连接到您的pyboard，并输入以下内容::
+要使py-mouse正常工作，我们需要向个人电脑发送鼠标事件。首先我们使用REPL提示符手动进行。使用串行程序连接到您的trailbreaker，并输入以下内容::
 
     >>> hid = pyb.USB_HID()
     >>> hid.send((0, 10, 0, 0))
@@ -54,10 +54,10 @@ Pyboard是一个USB设备，可配置为代替默认USB闪存驱动器的鼠标�
 使用加速度计制作一个鼠标
 -------------------------------------
 
-现在使用加速度计，使鼠标以pyboard的角度移动。以下代码可直接在REPL提示符中输入，
+现在使用加速度计，使鼠标以trailbreaker的角度移动。以下代码可直接在REPL提示符中输入，
 或放入 ``main.py`` 文件中。此处，我们选择后者。这样我们才可学习如何进入安全模式。
 
-此时，pyboard用作一个串行USB设备和HID（鼠标）。所以您无法访问文件系统来编辑您的 ``main.py`` 文件。
+此时，trailbreaker用作一个串行USB设备和HID（鼠标）。所以您无法访问文件系统来编辑您的 ``main.py`` 文件。
 
 您也无法编辑您的 ``boot.py`` 以退出HID模式并返回使用USB驱动的常规模式。
 
@@ -70,7 +70,7 @@ Pyboard是一个USB设备，可配置为代替默认USB闪存驱动器的鼠标�
 5. 橙色LED应快速闪烁4次，然后熄灭。
 6. 现在您就处于安全模式了。
 
-在安全模式下， ``boot.py`` 和 ``main.py`` 文件未执行，因此pyboard以默认设置启动。
+在安全模式下， ``boot.py`` 和 ``main.py`` 文件未执行，因此trailbreaker以默认设置启动。
 这意味着现在您可访问文件系统（USB驱动应显示），且您可编辑 ``main.py`` 。
 （保持 ``boot.py`` 的原有状态，因为结束编辑 ``main.py`` 后我们仍要返回HID状态。）
 
@@ -86,19 +86,19 @@ Pyboard是一个USB设备，可配置为代替默认USB闪存驱动器的鼠标�
         hid.send((0, accel.x(), accel.y(), 0))
         pyb.delay(20)
 
-保存您的文件，弹出/卸载您的pyboard驱动，并使用RST开关重置。现在pyboard应用作鼠标，板的角度会使鼠标移动。试试您能否保持鼠标不动！
+保存您的文件，弹出/卸载您的trailbreaker驱动，并使用RST开关重置。现在trailbreaker应用作鼠标，板的角度会使鼠标移动。试试您能否保持鼠标不动！
 
 按下USR开关以停止鼠标运动。
 
 您将注意到y轴是反的。这个问题很容易解决：在上面的 ``hid.send()`` 行中的y坐标前添加负号。
 
-将pyboard恢复至常态
+将trailbreaker恢复至常态
 --------------------------------
 
-若您保持pyboard的状态不变，则每次插入时pyboard都会显示为鼠标。您可能想将其恢复至常态。
+若您保持trailbreaker的状态不变，则每次插入时trailbreaker都会显示为鼠标。您可能想将其恢复至常态。
 首先您需要进入安全模式（见上），然后编辑 ``boot.py`` 文件。
 在 ``boot.py`` 文件中，为带有 ``VCP+HID`` 设置的行添加注释，其将形如::
 
     #pyb.usb_mode('VCP+HID') # act as a serial device and a mouse 用作一个串行设备和鼠标
 
-保存您的文件，弹出/卸载驱动，并重置pyboard。现在pyboard返回至正常运行模式。
+保存您的文件，弹出/卸载驱动，并重置trailbreaker。现在trailbreaker返回至正常运行模式。

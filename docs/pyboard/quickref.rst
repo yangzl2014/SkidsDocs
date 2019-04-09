@@ -1,8 +1,8 @@
 .. _quickref:
 
-pyboard快速参考
+trailbreaker快速参考
 ===============================
-下面的引脚图是 PYBv1.0.  pyboard其他版本的见：
+下面的引脚图是 PYBv1.0.  trailbreaker其他版本的见：
 `PYBv1.1 <http://micropython.org/resources/pybv11-pinout.jpg>`__
 `PYBLITEv1.0-AC <http://micropython.org/resources/pyblitev10ac-pinout.jpg>`__
 `PYBLITEv1.0 <http://micropython.org/resources/pyblitev10-pinout.jpg>`__.

@@ -52,7 +52,7 @@ AMP面板有一个通过小功率放大器连接到 ``DAC(1)`` 的话筒。
 
 您可使用Python ``wave`` 模块播放WAV文件。您可从 `此处 <http://micropython.org/resources/examples/wave.py>`__
 获取 ``wave`` 模块，您还需要可用的块模块 `此处 <http://micropython.org/resources/examples/chunk.py>`__.
-将这些置于您的pyboard上（在Flash或在顶层目录的SD卡上）。您需要一个用以播放的8位WAV文件，例如 `这个 <http://micropython.org/resources/examples/test.wav>`_，
+将这些置于您的trailbreaker上（在Flash或在顶层目录的SD卡上）。您需要一个用以播放的8位WAV文件，例如 `这个 <http://micropython.org/resources/examples/test.wav>`_，
 或使用以下指令转换您的文件::
 
     avconv -i original.wav -ar 22050 -codec pcm_u8 test.wav

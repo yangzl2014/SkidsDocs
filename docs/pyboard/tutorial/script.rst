@@ -1,61 +1,61 @@
 运行你的第一个脚本
 =========================
 
-让我们直接进入并在pyboard上运行Python脚本。 后
+让我们直接进入并在trailbreaker上运行Python脚本。 后
 所有，这就是它的全部！
 
-连接你的pyboard
+连接你的trailbreaker
 -----------------------
 
-使用micro USB线将pyboard连接到PC（Windows，Mac或Linux）。
+使用micro USB线将trailbreaker连接到PC（Windows，Mac或Linux）。
 电缆只有一种连接方式，所以你不会错。
 
-.. image:: img/pyboard_usb_micro.jpg
+.. image:: img/trailbreaker_usb_micro.jpg
 
-当pyboard连接到PC时，它将打开电源并进入启动状态
+当trailbreaker连接到PC时，它将打开电源并进入启动状态
 进程（引导过程）。 绿色LED应亮起半秒钟或
 更少，当它关闭时，意味着启动过程已完成。
 
-打开pyboard USB驱动器
+打开trailbreaker USB驱动器
 -----------------------------
 
-您的PC现在应该识别pyboard。这取决于您的PC类型
+您的PC现在应该识别trailbreaker。这取决于您的PC类型
 关于接下来会发生什么：
 
-   -  ** Windows **：您的pyboard将显示为可移动USB闪存驱动器。
+   -  ** Windows **：您的trailbreaker将显示为可移动USB闪存驱动器。
     Windows可能会自动弹出一个窗口，或者您可能需要去那里
     使用Explorer。
 
-    Windows也会看到pyboard有一个串行设备，它会
+    Windows也会看到trailbreaker有一个串行设备，它会
     尝试自动配置此设备。如果是，请取消该过程。
     我们将在下一个教程中使用串行设备。
 
-   -  ** Mac **：您的pyboard将作为可移动光盘出现在桌面上。
-    它可能会被称为“NONAME”。单击它打开pyboard文件夹。
+   -  ** Mac **：您的trailbreaker将作为可移动光盘出现在桌面上。
+    它可能会被称为“NONAME”。单击它打开trailbreaker文件夹。
 
-   -  ** Linux **：您的pyboard将显示为可移动媒体。在Ubuntu上
-    它将自动挂载并弹出一个带有pyboard文件夹的窗口。
-    在其他Linux发行版上，pyboard可以自动挂载，
+   -  ** Linux **：您的trailbreaker将显示为可移动媒体。在Ubuntu上
+    它将自动挂载并弹出一个带有trailbreaker文件夹的窗口。
+    在其他Linux发行版上，trailbreaker可以自动挂载，
     或者你可能需要手动完成。在终端命令行中，键入``lsblk``
     查看连接驱动器的列表，然后``mount / dev / sdb1``（替换``sdb1``
     用适当的设备）。您可能需要root才能执行此操作。
 
-好的，所以你现在应该将pyboard连接为USB闪存盘，并且
-窗口（或命令行）应显示pyboard驱动器上的文件。
+好的，所以你现在应该将trailbreaker连接为USB闪存盘，并且
+窗口（或命令行）应显示trailbreaker驱动器上的文件。
 
-你正在看的驱动器被pyboard称为``/ flash``，应该包含
+你正在看的驱动器被trailbreaker称为``/ flash``，应该包含
 以下4个文件：
 
-*`boot.py <http://micropython.org/resources/fresh-pyboard/boot.py>`_  - 当pyboard启动时执行此脚本。它设定
-    pyboard的各种配置选项。
+*`boot.py <http://micropython.org/resources/fresh-trailbreaker/boot.py>`_  - 当trailbreaker启动时执行此脚本。它设定
+    trailbreaker的各种配置选项。
 
-*`main.py <http://micropython.org/resources/fresh-pyboard/main.py>`_  - 这是包含Python程序的主脚本。
+*`main.py <http://micropython.org/resources/fresh-trailbreaker/main.py>`_  - 这是包含Python程序的主脚本。
     它在``boot.py``之后执行。
 
-*`README.txt <http://micropython.org/resources/fresh-pyboard/README.txt>`_  - 这里包含一些关于获取的基本信息
-    从pyboard开始。
+*`README.txt <http://micropython.org/resources/fresh-trailbreaker/README.txt>`_  - 这里包含一些关于获取的基本信息
+    从trailbreaker开始。
 
-*`pybcdc.inf <http://micropython.org/resources/fresh-pyboard/pybcdc.inf>`_  - 这是一个用于配置串行USB的Windows驱动程序文件
+*`pybcdc.inf <http://micropython.org/resources/fresh-trailbreaker/pybcdc.inf>`_  - 这是一个用于配置串行USB的Windows驱动程序文件
     设备。在下一个教程中有关于此的更多信息
 
 编辑``main.py``
@@ -80,21 +80,21 @@
 
 我们写的第一行说我们想要使用``pyb``模块。
 该模块包含控制功能的所有功能和类
-pyboard的。
+trailbreaker的。
 
 我们写的第二行打开蓝色LED：它首先得到“LED”
 来自``pyb``模块的类，创建LED编号4（蓝色LED），然后
 打开它。
 
-重置pyboard
+重置trailbreaker
 ---------------------
 
 要运行这个小脚本，您需要先保存并关闭``main.py``文件，
-然后弹出（或卸载）pyboard USB驱动器。 像你一样这样做
+然后弹出（或卸载）trailbreaker USB驱动器。 像你一样这样做
 普通的USB闪存盘。
 
 安全弹出/卸载驱动器后，您可以进入有趣的部分：
-按下pyboard上的RST开关重置并运行脚本。 RST
+按下trailbreaker上的RST开关重置并运行脚本。 RST
 开关是电路板上USB连接器正下方的小黑色按钮，
 在右边缘。
 

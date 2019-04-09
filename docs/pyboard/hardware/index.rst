@@ -1,9 +1,9 @@
 .. _hardware_index:
 
-pyboard硬件
+trailbreaker硬件
 --------------------
 
-对于pyboard：
+对于trailbreaker：
 
 *`PYBv1.0原理图和布局<http://micropython.org/resources/PYBv10b.pdf>`_（2.4MiB PDF）
 *`PYBv1.0公制尺寸<http://micropython.org/resources/PYBv10b-metric-dimensions.pdf>`_（360KiB PDF）
@@ -15,7 +15,7 @@ pyboard硬件
 *`AMPv1.0原理图<http://micropython.org/resources/AMPv10-schematics.pdf>`_（209KiB PDF）
 * LCD160CRv1.0：见：mod：`lcd160cr`
 
-pyboard上组件的数据表
+trailbreaker上组件的数据表
 --------------------------------------------
 
 *微控制器：`STM32F405RGT6 <http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1577/LN1035/PF252144>`_（链接到制造商的网站）

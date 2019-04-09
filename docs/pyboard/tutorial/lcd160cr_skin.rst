@@ -13,14 +13,14 @@ LCD160CR面板
 插入显示屏
 -----------------------
 
-此显示屏可直接插入pyboard（支持所有版本的pyboard）。您可将显示屏插入pyboard的顶部，X或Y位置均可。
-显示屏应覆盖pyboard的1/2。具体操作请参见上图，图片的左半部分显示X位置，右半部分为Y位置。
+此显示屏可直接插入trailbreaker（支持所有版本的trailbreaker）。您可将显示屏插入trailbreaker的顶部，X或Y位置均可。
+显示屏应覆盖trailbreaker的1/2。具体操作请参见上图，图片的左半部分显示X位置，右半部分为Y位置。
 
 获取驱动
 ------------------
 
 您可使用电源/启用引脚和I2C总线直接控制显示器，但是使用 `lcd160cr` 模块提供的驱动更为方便。
-此驱动包含在最新版本的pyboard固件中 (见 `此处 <http://micropython.org/download>`__)。
+此驱动包含在最新版本的trailbreaker固件中 (见 `此处 <http://micropython.org/download>`__)。
 您也可在GitHub中 `这里 <https://github.com/micropython/micropython/blob/master/drivers/display/lcd160cr.py>`__获取这一驱动；
 使用这一版本，您需将文件复制到您的板上一个通过导入查找的目录中（通常为lib/目录）。
 
@@ -31,7 +31,7 @@ LCD160CR面板
 测试显示屏
 -------------------
 
-这是一个可用于检测显示屏特性的程序，也可用作开始创建使用LCD的代码的基础。此检测程序包含在最新版的pyboard固件中，也可在GitHub中获取
+这是一个可用于检测显示屏特性的程序，也可用作开始创建使用LCD的代码的基础。此检测程序包含在最新版的trailbreaker固件中，也可在GitHub中获取
 `这里 <https://github.com/micropython/micropython/blob/master/drivers/display/lcd160cr_test.py>`__.
 
 从MicroPython提示符中运行此检测程序，请::
@@ -85,7 +85,7 @@ LCD160CR面板
 将MicroPython输入导向到显示屏
 -----------------------------------------------
 
-显示屏支持来自UART的输入，并实现基本VT100指令，也就意味着其可用作一个简单的通用终端。现在我们将pyboard设置为将其输出重新导向到显示屏。
+显示屏支持来自UART的输入，并实现基本VT100指令，也就意味着其可用作一个简单的通用终端。现在我们将trailbreaker设置为将其输出重新导向到显示屏。
 
 首先您需创建一个UART对象::
 
@@ -100,6 +100,6 @@ LCD160CR面板
 
 现在开始，您在提示符中输入的和您接收的任何内容都将出现在显示屏上。
 
-运行此代码无需任何设置指令，您可将显示屏用于监测UART的输出（而不仅来自pyboard）。
+运行此代码无需任何设置指令，您可将显示屏用于监测UART的输出（而不仅来自trailbreaker）。
 所需条件只有显示屏有电源线、地线和power/enable引脚置高。显示器UART输入的任何参数将打印到显示屏。
 您可使用 `set_uart_baudrate` 方法将UART的波特率从默认值115200更改为其他值。

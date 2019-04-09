@@ -4,15 +4,15 @@ LCD和触摸传感器
 焊接和使用LCD和触摸传感器。
 
 .. image:: img/skin_lcd_1.jpg
-    :alt: pyboard with LCD skin
+    :alt: trailbreaker with LCD skin
     :width: 250px
 
 .. image:: img/skin_lcd_2.jpg
-    :alt: pyboard with LCD skin
+    :alt: trailbreaker with LCD skin
     :width: 250px
 
 下面的视频展示了如何将顶盖焊接到LCD面板上。
-在视频末尾，您将看到怎样将LCD面板正确连接到pyboard。
+在视频末尾，您将看到怎样将LCD面板正确连接到trailbreaker。
 
 .. raw:: html
 
@@ -23,7 +23,7 @@ LCD和触摸传感器
 使用LCD
 -------------
 
-开始启用LCD，请在MicroPython提示符中尝试以下指令。请确保LCD面板连接到pyboard的方式如此页面顶部图片中所示相同。 ::
+开始启用LCD，请在MicroPython提示符中尝试以下指令。请确保LCD面板连接到trailbreaker的方式如此页面顶部图片中所示相同。 ::
 
     >>> import pyb
     >>> lcd = pyb.LCD('X')
@@ -57,7 +57,7 @@ LCD和触摸传感器
 
 `此处 <http://micropython.org/resources/examples/mpr121.py>`__
 提供一个可使您设置阈值和去抖参数以及轻松读取触摸状态和电极电压水平的简单驱动。
-将此脚本复制到您的pyboard（Flash或SD卡，在顶层目录或 ``lib/`` 目录），然后尝试::
+将此脚本复制到您的trailbreaker（Flash或SD卡，在顶层目录或 ``lib/`` 目录），然后尝试::
 
     >>> import pyb
     >>> import mpr121
