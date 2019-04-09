@@ -203,10 +203,10 @@ MicroPython实现的特定功能可在以下库中找到。
 
 .. only:: port_pyboard
 
-   特定于 pyboard 的库
+   特定于 trailbreaker 的库
    ---------------------------------
 
-   以下库特定于 pyboard.
+   以下库特定于 trailbreaker.
 
    .. toctree::
       :maxdepth: 2
