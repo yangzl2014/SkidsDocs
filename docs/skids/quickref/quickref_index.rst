@@ -11,5 +11,6 @@ Skids的快速参考
    skidsuse.rst
    turtle.rst
    calculator.rst
+   guess.rst
    snake.rst
    tetris.rst
