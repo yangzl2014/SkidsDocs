@@ -1,6 +1,6 @@
 .. _skidsuse:
 
-Skids使用
+Skids的使用
 ============================
 
 Skids连接PC
