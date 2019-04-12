@@ -34,7 +34,7 @@
 
 - **按键排列**
 
-Skids的4个按键的排列顺序如下图所示：
+  + Skids的4个按键的排列顺序如下图所示：
 
 .. image:: img/guess2.png
     :alt: guess
