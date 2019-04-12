@@ -20,13 +20,13 @@
     {% endfor %}.
   </p-->
 
-  <p><strong> MicroPython and {{ port_name }}的文档:</strong></p>
+  <p><strong> MicroPython 和 {{ port_name }}的文档:</strong></p>
 
   <table class="contentstable"><tr>
     <td width="40%" style="padding-left:2em;">
-      {% if port in ("pyboard", "wipy", "esp8266") %}
+      {% if port in ("pyboard", "wipy", "esp8266", "skids") %}
         <p class="biglink">
-          <a class="biglink" href="{{ pathto(port + "/quickref") }}">trailbreaker的快速参考</a><br/>
+          <a class="biglink" href="{{ pathto("source/index") }}">欢迎使用trailbreaker文档!</a><br/>
         </p>
         <p class="biglink">
           <a class="biglink" href="{{ pathto(port + "/general") }}">trailbreaker的基本信息</a><br/>
@@ -35,6 +35,9 @@
           <a class="biglink" href="{{ pathto(port + "/tutorial/index") }}">教程和实例</a><br/>
         </p>
       {% endif %}
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("skids/index") }}">Skids</a><br/>
+      </p>
       <p class="biglink">
         <a class="biglink" href="{{ pathto("library/index") }}">函数库</a><br/>
       </p>
@@ -52,7 +55,7 @@
     </td>
   </tr></table>
 
-  <p><strong>Indices and tables:</strong></p>
+  <p><strong>索引和表格:</strong></p>
   <table class="contentstable"><tr>
     <td width="40%" style="padding-left:2em;">
       <p class="biglink">
@@ -72,7 +75,7 @@
     </td></tr>
   </table>
 
-  <p><strong>External links:</strong></p>
+  <p><strong>外部链接:</strong></p>
 
   <table class="contentstable"><tr>
     <td width="40%" style="padding-left:2em;">

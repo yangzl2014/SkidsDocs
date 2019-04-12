@@ -1,12 +1,12 @@
-MicroPython documentation and references
+MicroPython文档及参考
 ========================================
 
 .. toctree::
 
-    pyboard/quickref.rst
-    pyboard/general.rst
-    pyboard/tutorial/index.rst
+    tbindex.rst
+    skids/index.rst
     library/index.rst
     reference/index.rst
     genrst/index.rst
     license.rst
+
