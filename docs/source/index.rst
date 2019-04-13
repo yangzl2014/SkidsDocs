@@ -22,6 +22,8 @@
    snake
    flag
    day
+   clock
+   computer
 ==================
 
 * :ref:`genindex`
