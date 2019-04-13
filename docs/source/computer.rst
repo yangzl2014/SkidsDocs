@@ -691,6 +691,7 @@ font.py代码如下：
 
 输入算式：42-6+1.6-2=
 效果如下:
+
 .. image:: ../picture/computer.png
 
 
