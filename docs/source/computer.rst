@@ -693,6 +693,6 @@ font.py代码如下：
 
 效果如下:
 
-.. image:: ../picture/computer.png
+.. image:: ../picture/computer.jpg
 
 
