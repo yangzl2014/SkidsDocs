@@ -690,6 +690,7 @@ font.py代码如下：
       disp.putstr(6,7,str(fir),0x0000)
 
 输入算式：42-6+1.6-2=
+
 效果如下:
 
 .. image:: ../picture/computer.png
