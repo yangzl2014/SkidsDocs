@@ -468,7 +468,10 @@ font.py代码如下：
 
 
 主代码文件compute_done.py代码如下：
- ::
+
+
+ :: 
+
   from pyb import Pin,Timer
   import lcd_show
   from lcd_show import *
