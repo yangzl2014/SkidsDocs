@@ -8,7 +8,7 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容:
+   :caption: 内:
 
    board
    led
