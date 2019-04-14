@@ -545,5 +545,5 @@ main.py，调用两个头文件内函数代码如下：
 
 加载程序。显示电子日历。
 
-.. image:: ../picture/Chinese_result.png
+.. image:: ../picture/Chinese_result.jpg
 
