@@ -24,6 +24,7 @@
    day
    clock
    computer
+   LED64
 ==================
 
 * :ref:`genindex`
