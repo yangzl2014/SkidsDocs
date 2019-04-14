@@ -9,7 +9,7 @@ LED简介
 
 Skids集成了4个LED，在设备的顶部（屏幕上方），其颜色分别为红、黄、蓝、绿：
 
-.. image:: img/led1.jpg
+.. image:: img/led1.png
     :alt: led
     :width: 340px
 
