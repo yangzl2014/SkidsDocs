@@ -25,6 +25,7 @@
    clock
    computer
    LED64
+   Chinese
 ==================
 
 * :ref:`genindex`
