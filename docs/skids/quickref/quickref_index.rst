@@ -15,5 +15,5 @@ Skids的快速参考
    led.rst
    clock.rst
    snake.rst
-   game2018.rst
+   game2048.rst
    tetris.rst
