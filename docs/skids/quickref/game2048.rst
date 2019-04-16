@@ -73,7 +73,7 @@
 
     display.text(text,x,y,colorf, colorb)  #text:文本,x:左上角顶点横坐标,y:左上角顶点纵坐标,colorf:前景颜色,colorb:背景颜色
 
-代码：
+实现代码：
 ::
 
 	class Grid(object):
