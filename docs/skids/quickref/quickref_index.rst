@@ -13,5 +13,6 @@ Skids的快速参考
    calculator.rst
    guess.rst
    led.rst
+   clock.rst
    snake.rst
    tetris.rst
