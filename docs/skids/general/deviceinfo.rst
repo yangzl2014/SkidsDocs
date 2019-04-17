@@ -23,7 +23,7 @@ Skids搭载了一块240x320像素大小的LCD屏幕。
 
 .. image:: img/lcd.png
     :alt: lcd
-    :width: 240px
+    :width: 300px
 
 
 LED
