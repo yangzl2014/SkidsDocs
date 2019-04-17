@@ -11,5 +11,3 @@ Skids
    :maxdepth: 2
    :numbered:
 
-   quickref/quickref_index.rst
-   general/general_index.rst

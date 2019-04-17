@@ -62,7 +62,7 @@ LED
 
 .. image:: img/device2.png
     :alt: button
-    :width: 400px
+    :width: 340px
 
 - 4个按键引脚号分别为34，35，36，39。
 
