@@ -23,7 +23,7 @@ LED
 
 .. image:: img/device1.png
     :alt: led
-    :width: 240px
+    :width: 300px
 
 - 引脚
   + LED控制使能引脚：PIN 2
