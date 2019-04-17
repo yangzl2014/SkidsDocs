@@ -7,5 +7,4 @@ Skids的基本信息
    :maxdepth: 2
    :numbered:
 
-   deviceinfo.rst
-   circuit.rst
+

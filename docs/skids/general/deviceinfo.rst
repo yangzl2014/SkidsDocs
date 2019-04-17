@@ -26,6 +26,7 @@ LED
     :width: 240px
 
 - 引脚
+
   + LED控制使能引脚：PIN 2
   + LED1控制引脚：PIN 14（红色）
   + LED2控制引脚：PIN 32（黄色）
