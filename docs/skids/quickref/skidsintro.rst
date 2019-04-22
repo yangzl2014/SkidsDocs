@@ -3,7 +3,7 @@
 Skids简介
 ============================
 
-.. image:: img/skids.jpg
+.. image:: img/skids.png
     :alt: The front of skids
     :width: 640px
 
