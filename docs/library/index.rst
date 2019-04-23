@@ -40,78 +40,10 @@ Python标准库和micro-libraries
 例如， ``import json`` 将首先搜索一个文件 ``json.py`` 或目录 ``json`` ，若搜寻到相关内容，则加载该数据包。
 若未搜寻到目标信息，则后退以加载内置 ``ujson`` 模块。
 
-.. only:: port_unix
 
-    .. toctree::
-       :maxdepth: 1
-
-       builtins.rst
-       array.rst
-       cmath.rst
-       gc.rst
-       math.rst
-       sys.rst
-       ubinascii.rst
-       ucollections.rst
-       uerrno.rst
-       uhashlib.rst
-       uheapq.rst
-       uio.rst
-       ujson.rst
-       uos.rst
-       ure.rst
-       uselect.rst
-       usocket.rst
-       ustruct.rst
-       utime.rst
-       uzlib.rst
-
-.. only:: port_pyboard
-
-    .. toctree::
-       :maxdepth: 1
-
-       builtins.rst
-       array.rst
-       cmath.rst
-       gc.rst
-       math.rst
-       sys.rst
-       ubinascii.rst
-       ucollections.rst
-       uerrno.rst
-       uhashlib.rst
-       uheapq.rst
-       uio.rst
-       ujson.rst
-       uos.rst
-       ure.rst
-       uselect.rst
-       usocket.rst
-       ustruct.rst
-       utime.rst
-       uzlib.rst
-
-.. only:: port_wipy
-
-    .. toctree::
-       :maxdepth: 1
-
-       builtins.rst
-       array.rst
-       gc.rst
-       sys.rst
-       ubinascii.rst
-       ujson.rst
-       uos.rst
-       ure.rst
-       uselect.rst
-       usocket.rst
-       ussl.rst
-       utime.rst
-
-.. only:: port_esp8266
-
+------------------------------
+esp8266特定的库
+------------------------------
     .. toctree::
        :maxdepth: 1
 
@@ -136,7 +68,9 @@ Python标准库和micro-libraries
        utime.rst
        uzlib.rst
 
-.. only:: port_esp32
+------------------------------
+esp32特定的库
+------------------------------
 
     .. toctree::
        :maxdepth: 1
@@ -161,32 +95,9 @@ Python标准库和micro-libraries
        ustruct.rst
        utime.rst
        uzlib.rst
+       esp.rst
 
-.. only:: port_openmvcam
-
-    .. toctree::
-       :maxdepth: 1
-
-       builtins.rst
-       array.rst
-       gc.rst
-       math.rst
-       sys.rst
-       ubinascii.rst
-       uerrno.rst
-       uhashlib.rst
-       uheapq.rst
-       uio.rst
-       ujson.rst
-       uos.rst
-       ure.rst
-       uselect.rst
-       usocket.rst
-       ustruct.rst
-       utime.rst
-       uzlib.rst
-       _thread.rst
-
+------------------------------
 MicroPython特定的库
 ------------------------------
 
@@ -200,11 +111,29 @@ MicroPython实现的特定功能可在以下库中找到。
    micropython.rst
    network.rst
    uctypes.rst
-
-.. only:: port_pyboard
-
+   builtins.rst
+   array.rst
+   cmath.rst
+   gc.rst
+   math.rst
+   sys.rst
+   ubinascii.rst
+   ucollections.rst
+   uerrno.rst
+   uhashlib.rst
+   uheapq.rst
+   uio.rst
+   ujson.rst
+   uos.rst
+   ure.rst
+   uselect.rst
+   usocket.rst
+   ustruct.rst
+   utime.rst
+   uzlib.rst
+---------------------------------
    特定于 trailbreaker 的库
-   ---------------------------------
+---------------------------------
 
    以下库特定于 trailbreaker.
 
@@ -217,62 +146,3 @@ MicroPython实现的特定功能可在以下库中找到。
       uturtle.rst
       ubitmap.rst
       text.rst
-
-.. only:: port_wipy
-
-   特定于 WiPy 的库
-   ---------------------------------
-
-   以下库特定于 WiPy.
-
-   .. toctree::
-      :maxdepth: 2
-
-      wipy.rst
-
-
-.. only:: port_esp8266
-
-   特定于 ESP8266 的库
-   ---------------------------------
-
-   以下库特定于 ESP8266.
-
-   .. toctree::
-      :maxdepth: 2
-
-      esp.rst
-
-.. only:: port_openmvcam
-
-   特定于OpenMV Cam的库
-   ------------------------------------
-
-   以下库特定于OpenMV Cam.
-
-   .. toctree::
-      :maxdepth: 2
-
-      pyb.rst
-      pyb.ADC.rst
-      pyb.CAN.rst
-      pyb.DAC.rst
-      pyb.ExtInt.rst
-      pyb.I2C.rst
-      pyb.LED.rst
-      pyb.Pin.rst
-      pyb.RTC.rst
-      pyb.Servo.rst
-      pyb.SPI.rst
-      pyb.Timer.rst
-      pyb.UART.rst
-      pyb.USB_VCP.rst
-      omv.time.rst
-      omv.sensor.rst
-      omv.image.rst
-      omv.nn.rst
-      omv.gif.rst
-      omv.mjpeg.rst
-      omv.lcd.rst
-      omv.fir.rst
-      omv.omv.rst
