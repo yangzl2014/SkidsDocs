@@ -7,4 +7,3 @@ trailbreaker参考
 
    source/index.rst
    pyboard/general.rst
-   pyboard/tutorial/index.rst
