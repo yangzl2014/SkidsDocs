@@ -8,7 +8,7 @@
 .. image:: /picture/logo.jpg
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 
     tbindex.rst
     skids/index.rst
@@ -19,9 +19,9 @@ MicroPython类库
 .. toctree::
    :maxdepth: 1
    
-    library/index.rst
-    reference/index.rst
-    genrst/index.rst
+   library/index.rst
+   reference/index.rst
+   genrst/index.rst
 
 ----------------	
 许可信息
