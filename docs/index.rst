@@ -8,7 +8,7 @@
 .. image:: /picture/logo.jpg
 
 .. toctree::
-	:maxdepth: 3
+	:maxdepth: 2
 
     tbindex.rst
     skids/index.rst
@@ -18,21 +18,14 @@ MicroPython类库
 ----------------
 .. toctree::
    :maxdepth: 1
-   :caption: MicroPython类库
-   :hidden:
    
     library/index.rst
     reference/index.rst
     genrst/index.rst
-=========================================   ======================================================
- :ref:`MicroPython类库<library>`              MicroPython的常用module
- :ref:`MicroPython类库<reference>`            索引
-=========================================   ======================================================
 
 ----------------	
 许可信息
 ----------------
 .. toctree::
-   :maxdepth: 1
    license.rst
 
