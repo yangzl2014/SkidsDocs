@@ -19,43 +19,43 @@ import os
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('.'))
+#sys.path.insert(0, os.path.abspath('.'))
 
 # Work out the port to generate the docs for
-from collections import OrderedDict
-micropy_port = os.getenv('MICROPY_PORT') or 'pyboard'
-tags.add('port_' + micropy_port)
-ports = OrderedDict((
-    ('unix', 'unix'),
-    ('pyboard', 'the pyboard'),
-    ('wipy', 'the WiPy'),
-    ('esp8266', 'the ESP8266'),
-))
+#from collections import OrderedDict
+#micropy_port = os.getenv('MICROPY_PORT') or 'pyboard'
+#tags.add('port_' + micropy_port)
+#ports = OrderedDict((
+#    ('unix', 'unix'),
+#    ('pyboard', 'the pyboard'),
+#    ('wipy', 'the WiPy'),
+#    ('esp8266', 'the ESP8266'),
+#))
 
 # The members of the html_context dict are available inside topindex.html
-micropy_version = os.getenv('MICROPY_VERSION') or 'latest'
-micropy_all_versions = (os.getenv('MICROPY_ALL_VERSIONS') or 'latest').split(',')
-url_pattern = '%s/en/%%s/%%s' % (os.getenv('MICROPY_URL_PREFIX') or '/',)
-html_context = {
-    'port':micropy_port,
-    'port_name':ports[micropy_port],
-    'port_version':micropy_version,
-    'all_ports':[
-        (port_id, url_pattern % (micropy_version, port_id))
-            for port_id, port_name in ports.items()
-    ],
-    'all_versions':[
-        (ver, url_pattern % (ver, micropy_port))
-            for ver in micropy_all_versions
-    ],
-    'downloads':[
-        ('PDF', url_pattern % (micropy_version, 'micropython-%s.pdf' % micropy_port)),
-    ],
-}
+#micropy_version = os.getenv('MICROPY_VERSION') or 'latest'
+#micropy_all_versions = (os.getenv('MICROPY_ALL_VERSIONS') or 'latest').split(',')
+#url_pattern = '%s/en/%%s/%%s' % (os.getenv('MICROPY_URL_PREFIX') or '/',)
+#html_context = {
+#    'port':micropy_port,
+#    'port_name':ports[micropy_port],
+#    'port_version':micropy_version,
+#    'all_ports':[
+#        (port_id, url_pattern % (micropy_version, port_id))
+#            for port_id, port_name in ports.items()
+ #   ],
+ #   'all_versions':[
+  #      (ver, url_pattern % (ver, micropy_port))
+   #         for ver in micropy_all_versions
+    #],
+    #'downloads':[
+     #   ('PDF', url_pattern % (micropy_version, 'micropython-%s.pdf' % micropy_port)),
+    #],
+#}
 
 
 # Specify a custom master document based on the port name
-master_doc = micropy_port + '_' + 'index'
+#master_doc = micropy_port + '_' + 'index'
 
 # -- General configuration ------------------------------------------------
 
@@ -71,9 +71,9 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
-    'sphinx_selective_exclude.modindex_exclude',
-    'sphinx_selective_exclude.eager_only',
-    'sphinx_selective_exclude.search_auto_exclude',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.viewcode',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -113,11 +113,11 @@ language = u'zh'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['build', '.venv']
-
+#exclude_patterns = ['build', '.venv']
+exclude_patterns = []
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
-default_role = 'any'
+#default_role = 'any'
 
 # If true, '()' will be appended to :func: etc. cross-reference text.
 #add_function_parentheses = True
@@ -138,7 +138,8 @@ pygments_style = 'sphinx'
 
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
-
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+todo_include_todos = True
 # Global include files. Sphinx docs suggest using rst_epilog in preference
 # of rst_prolog, so we follow. Absolute paths below mean "from the base
 # of the doctree".
@@ -149,19 +150,19 @@ pygments_style = 'sphinx'
 # -- Options for HTML output ----------------------------------------------
 
 # on_rtd is whether we are on readthedocs.org
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+#on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
-if not on_rtd:  # only import and set the theme if we're building docs locally
-    try:
-        import sphinx_rtd_theme
-        html_theme = 'sphinx_rtd_theme'
-        html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), '.']
-    except:
-        html_theme = 'default'
-        html_theme_path = ['.']
-else:
-    html_theme_path = ['.']
-
+#if not on_rtd:  # only import and set the theme if we're building docs locally
+#    try:
+#        import sphinx_rtd_theme
+#        html_theme = 'sphinx_rtd_theme'
+#        html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), '.']
+#    except:
+#        html_theme = 'default'
+#        html_theme_path = ['.']
+#else:
+#    html_theme_path = ['.']
+html_theme = 'sphinx_rtd_theme'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -222,7 +223,7 @@ html_additional_pages = {}
 #html_split_index = False
 
 # If true, links to the reST sources are added to the pages.
-#html_show_sourcelink = True
+html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #html_show_sphinx = True
@@ -246,15 +247,19 @@ htmlhelp_basename = 'MicroPythondoc'
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+'papersize': 'letterpaper',
 
 # The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
 # Include 3 levels of headers in PDF ToC
-'preamble': '\setcounter{tocdepth}{2}',
+'preamble': r'''
+        \usepackage{charter}
+        \usepackage[defaultsans]{lato}
+        \usepackage{inconsolata}
+    ''',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -262,7 +267,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   (master_doc, 'MicroPython.tex', 'MicroPython Documentation',
-   'Damien P. George, Paul Sokolovsky, and contributors', 'manual'),
+   'NEUAI', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -291,8 +296,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'micropython', 'MicroPython Documentation',
-     ['Damien P. George, Paul Sokolovsky, and contributors'], 1),
+    #('index', 'micropython', 'MicroPython Documentation',
+    # ['Damien P. George, Paul Sokolovsky, and contributors'], 1),
 ]
 
 # If true, show URL addresses after external links.
@@ -305,9 +310,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'MicroPython', 'MicroPython Documentation',
-   'Damien P. George, Paul Sokolovsky, and contributors', 'MicroPython', 'One line description of project.',
-   'Miscellaneous'),
+  #(master_doc, 'MicroPython', 'MicroPython Documentation',
+  # 'Damien P. George, Paul Sokolovsky, and contributors', 'MicroPython', 'One line description of project.',
+   #'Miscellaneous'),
 ]
 
 # Documents to append as an appendix to all manuals.
@@ -324,25 +329,25 @@ texinfo_documents = [
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'python': ('http://docs.python.org/3.5', None)}
+#intersphinx_mapping = {'python': ('http://docs.python.org/3.5', None)}
 
 # Append the other ports' specific folders/files to the exclude pattern
-exclude_patterns.extend([port + '*' for port in ports if port != micropy_port])
+#exclude_patterns.extend([port + '*' for port in ports if port != micropy_port])
 
-modules_port_specific = {
-    'pyboard': ['pyb'],
-    'wipy': ['wipy'],
-    'esp8266': ['esp'],
-}
+#modules_port_specific = {
+#    'pyboard': ['pyb'],
+#    'wipy': ['wipy'],
+#    'esp8266': ['esp'],
+#}
 
-modindex_exclude = []
+#modindex_exclude = []
 
-for p, l in modules_port_specific.items():
-    if p != micropy_port:
-        modindex_exclude += l
+#for p, l in modules_port_specific.items():
+#    if p != micropy_port:
+#        modindex_exclude += l
 
 # Exclude extra modules per port
-modindex_exclude += {
-    'esp8266': ['cmath', 'select'],
-    'wipy': ['cmath'],
-}.get(micropy_port, [])
+#modindex_exclude += {
+#    'esp8266': ['cmath', 'select'],
+#    'wipy': ['cmath'],
+#}.get(micropy_port, [])
