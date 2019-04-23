@@ -8,7 +8,9 @@
 .. image:: /picture/logo.jpg
 
 -----------------
+
 Trailbreaker 参考
+
 -----------------
 
 .. toctree::
@@ -17,7 +19,9 @@ Trailbreaker 参考
    tbindex.rst
 
 -----------------
+
 Skids 参考
+
 -----------------
 
 .. toctree::
@@ -26,7 +30,9 @@ Skids 参考
    skids/index.rst
 
 -----------------
+
 MicroPython类库
+
 -----------------
 
 .. toctree::
@@ -35,7 +41,9 @@ MicroPython类库
    library/index.rst
 
 -----------------
+
 MicroPython 语法
+
 -----------------
 
 .. toctree::
@@ -45,22 +53,29 @@ MicroPython 语法
 
    
 -----------------
+
 许可信息
+
 -----------------
+
 .. toctree::
    :maxdepth: 1
 
    license.rst
+
+-----------------
+
+术语表
+
+-----------------
+
+.. toctree::
+   :maxdepth: 1
+
+   reference/glossary.rst
 
 索引
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
-
-术语表
-==================
-.. toctree::
-   :maxdepth: 1
-
-   reference/glossary.rst
