@@ -56,4 +56,11 @@ MicroPython 语法
 ==================
 
 * :ref:`genindex`
-* :ref:`py-modindex`
+* :ref:`modindex`
+
+术语表
+==================
+.. toctree::
+   :maxdepth: 1
+
+   reference/glossary.rst
