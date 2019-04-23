@@ -392,4 +392,4 @@ html_theme_options = {
 }
 
 
-html_logo = 'images/logo.png'
+html_logo = 'images/logo.jpg'
