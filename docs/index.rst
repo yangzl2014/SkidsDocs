@@ -33,9 +33,17 @@ MicroPython类库
    :maxdepth: 1
 
    library/index.rst
-   reference/index.rst
-   genrst/index.rst
 
+-----------------
+MicroPython 语法
+-----------------
+
+.. toctree::
+   :maxdepth: 1
+
+   reference/index.rst
+
+   
 -----------------
 许可信息
 -----------------
@@ -44,3 +52,8 @@ MicroPython类库
 
    license.rst
 
+索引
+==================
+
+* :ref:`genindex`
+* :ref:`py-modindex`
