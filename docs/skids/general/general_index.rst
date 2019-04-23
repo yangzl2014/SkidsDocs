@@ -8,3 +8,4 @@ Skids的基本信息
    :numbered:
 
    deviceinfo.rst
+   circuit.rst

@@ -11,5 +11,9 @@ Skids的快速参考
    skidsuse.rst
    turtle.rst
    calculator.rst
+   guess.rst
+   led.rst
+   clock.rst
    snake.rst
+   game2048.rst
    tetris.rst

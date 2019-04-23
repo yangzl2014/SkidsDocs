@@ -22,6 +22,10 @@
    snake
    flag
    day
+   clock
+   computer
+   LED64
+   Chinese
 ==================
 
 * :ref:`genindex`
