@@ -38,7 +38,7 @@
 
 .. image:: img/guess2.png
     :alt: guess
-    :width: 340px
+    :width: 440px
 
 - **程序流程图**
 
