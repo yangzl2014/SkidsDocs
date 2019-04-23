@@ -40,63 +40,33 @@ Python标准库和micro-libraries
 例如， ``import json`` 将首先搜索一个文件 ``json.py`` 或目录 ``json`` ，若搜寻到相关内容，则加载该数据包。
 若未搜寻到目标信息，则后退以加载内置 ``ujson`` 模块。
 
-
 ------------------------------
-esp8266特定的库
-------------------------------
-    .. toctree::
-       :maxdepth: 1
-
-       builtins.rst
-       array.rst
-       gc.rst
-       math.rst
-       sys.rst
-       ubinascii.rst
-       ucollections.rst
-       uerrno.rst
-       uhashlib.rst
-       uheapq.rst
-       uio.rst
-       ujson.rst
-       uos.rst
-       ure.rst
-       uselect.rst
-       usocket.rst
-       ussl.rst
-       ustruct.rst
-       utime.rst
-       uzlib.rst
-
-------------------------------
-esp32特定的库
+Python特定的库
 ------------------------------
 
     .. toctree::
        :maxdepth: 1
-
-       builtins.rst
-       array.rst
-       gc.rst
+       
+	   builtins.rst
        math.rst
-       sys.rst
-       ubinascii.rst
-       ucollections.rst
-       uerrno.rst
-       uhashlib.rst
-       uheapq.rst
-       uio.rst
-       ujson.rst
-       uos.rst
-       ure.rst
-       uselect.rst
-       usocket.rst
-       ussl.rst
-       ustruct.rst
-       utime.rst
-       uzlib.rst
-       esp.rst
-
+	   array.rst
+	   gc.rst
+	   sys.rst
+	   ubinascii.rst
+	   ucollections.rst
+	   uerrno.rst
+	   uhashlib.rst
+	   uheapq.rst
+	   uio.rst
+	   ujson.rst
+	   uos.rst
+	   ure.rst
+	   uselect.rst
+	   usocket.rst
+	   ustruct.rst
+	   utime.rst
+	   uzlib.rst
+	   cmath.rst
 ------------------------------
 MicroPython特定的库
 ------------------------------
@@ -105,32 +75,14 @@ MicroPython实现的特定功能可在以下库中找到。
 
 .. toctree::
    :maxdepth: 1
-
+   
    btree.rst
+   framebuf.rst
    machine.rst
    micropython.rst
    network.rst
    uctypes.rst
-   builtins.rst
-   array.rst
-   cmath.rst
-   gc.rst
-   math.rst
-   sys.rst
-   ubinascii.rst
-   ucollections.rst
-   uerrno.rst
-   uhashlib.rst
-   uheapq.rst
-   uio.rst
-   ujson.rst
-   uos.rst
-   ure.rst
-   uselect.rst
-   usocket.rst
-   ustruct.rst
-   utime.rst
-   uzlib.rst
+
 ---------------------------------
    特定于 trailbreaker 的库
 ---------------------------------
@@ -141,6 +93,15 @@ MicroPython实现的特定功能可在以下库中找到。
       :maxdepth: 2
 
       pyb.rst
+
+---------------------------------
+   特定于 Skids 的库
+---------------------------------
+
+   以下库特定于 Skids.
+   .. toctree::
+      :maxdepth: 2
+
       lcd160cr.rst
       screen.rst
       uturtle.rst
