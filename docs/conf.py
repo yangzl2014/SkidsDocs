@@ -86,11 +86,11 @@ source_suffix = '.rst'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-#master_doc = 'index'
+master_doc = 'pyboard_index'
 
 # General information about the project.
-project = 'MicroPython'
-copyright = '2014-2018, Damien P. George, Paul Sokolovsky, and contributors'
+project = 'NEUAI'
+copyright = '2019, NEUAI'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
