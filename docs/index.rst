@@ -7,33 +7,40 @@
 
 .. image:: /picture/logo.jpg
 
-----------------	
+-----------------
 Trailbreaker 参考
-----------------
-.. toctree::
-	:maxdepth: 1
+-----------------
 
-    tbindex.rst
-----------------	
-Skids 参考
-----------------
 .. toctree::
-	:maxdepth: 1
-    skids/index.rst
-	
-----------------	
-MicroPython类库
-----------------
+   :maxdepth: 1
+
+   tbindex.rst
+
+-----------------
+Skids 参考
+-----------------
+
 .. toctree::
    :maxdepth: 1
    
+   skids/index.rst
+
+-----------------
+MicroPython类库
+-----------------
+
+.. toctree::
+   :maxdepth: 1
+
    library/index.rst
    reference/index.rst
    genrst/index.rst
 
-----------------	
+-----------------
 许可信息
-----------------
+-----------------
 .. toctree::
+   :maxdepth: 1
+
    license.rst
 
