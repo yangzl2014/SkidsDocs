@@ -7,10 +7,18 @@
 
 .. image:: /picture/logo.jpg
 
+----------------	
+Trailbreaker 参考
+----------------
 .. toctree::
 	:maxdepth: 1
 
     tbindex.rst
+----------------	
+Skids 参考
+----------------
+.. toctree::
+	:maxdepth: 1
     skids/index.rst
 	
 ----------------	
