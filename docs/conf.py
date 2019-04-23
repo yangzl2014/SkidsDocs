@@ -142,9 +142,9 @@ pygments_style = 'sphinx'
 # Global include files. Sphinx docs suggest using rst_epilog in preference
 # of rst_prolog, so we follow. Absolute paths below mean "from the base
 # of the doctree".
-rst_epilog = """
-.. include:: /templates/replace.inc
-"""
+#rst_epilog = """
+#.. include:: /templates/replace.inc
+#"""
 
 # -- Options for HTML output ----------------------------------------------
 
