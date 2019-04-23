@@ -64,7 +64,7 @@ author = u''
 # built documents.
 #
 # The short X.Y version.
-version = release = '1.0.7'
+version = release = '1.0.0'
 # The full version, including alpha/beta/rc tags.
 
 
@@ -240,7 +240,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-   (master_doc, 'mPython.tex', u'mPython Documentation',
+   (master_doc, 'MicroPython.tex', u'mPython Documentation',
     u'', 'manual'),
 ]
 
@@ -270,7 +270,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    # (master_doc, 'docutils', u'docutils Documentation',
+    # (master_doc, 'MicroPython', u'MicroPython Documentation',
     #  [author], 1)
 ]
 
@@ -284,8 +284,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  # (master_doc, 'docutils', u'docutils Documentation',
-  #  author, 'docutils', 'One line description of project.',
+  # (master_doc, 'MicroPython', u'MicroPython Documentation',
+  #  author, 'MicroPython', 'One line description of project.',
   #  'Miscellaneous'),
 ]
 
