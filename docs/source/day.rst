@@ -1,8 +1,20 @@
 电子日历
 ------------------
+模块介绍
+^^^^^^^^^^^^^^^^^^^^^
+此实验使用EDU-TFT-1.8模块
+
+*实物图：
+
+EDU-TFT-1.8模块
+
+.. image:: ../picture/lcd.jpg
+   :width: 300px
+   :height: 200px
 编程学习
 ^^^^^^^^^
 打开main.py文件开始编写代码:
+
 导入头文件:
 
  :: 
@@ -84,7 +96,7 @@
 	disp.put_vline(87,13,108,disp.BLACK)
 	disp.put_vline(105,13,108,disp.BLACK)
 
-获取当前时间，选中星期：
+设置初始日期，选中星期：
  ::
 
 	rtc = pyb.RTC()
@@ -106,7 +118,7 @@
 		disp.putstr_back(x,y,'0'+str(a[3]),disp.WHITE,disp.WHITE)
 		disp.putstr_back(x,y,'0'+str(a[3]),disp.BLACK,disp.PINK)
 
-显示当前时间，并时刻更新：
+显示日期，并时刻更新：
  ::
 
 	s1='year:'+str(t1)
@@ -179,4 +191,5 @@
 加载程序。显示电子日历。
 
 .. image:: ../picture/day.png
-
+   :width: 300px
+   :height: 400px

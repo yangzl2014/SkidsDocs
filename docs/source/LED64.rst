@@ -1,5 +1,17 @@
-滚动显示I❤NEU
+LED点阵滚动显示文字
 ------------------
+
+模块介绍
+^^^^^^^^^^^^^^^^^^^^^
+此实验使用Solder_DisCan_1B模块
+
+*实物图：
+
+Solder_DisCan_1B模块
+
+.. image:: ../picture/led1.jpg
+   :width: 300px
+   :height: 200px
 编程学习
 ^^^^^^^^^
 打开main.py文件开始编写代码:
@@ -25,6 +37,8 @@
   c=[Pin(i, Pin.OUT_PP) for i in ['Y2','Y1','Y3','Y4','Y5','Y6','Y8','Y7']]
   for i in range (8):
     c[i].high()
+
+.. Note:: 通过两个循环把行，列的所有引脚拉高，熄灭LED点阵，只有行列的引脚同时为低电平时灯才能亮。
 
 设置完毕后，即可编写函数实现各种功能，代码如下：
 
@@ -53,10 +67,10 @@
       [[1,2,3,4,5,6,7,8],[[0,0,0,0,0,0,0,0,],[],[],[],[],[],[],[],]]
       ]
 
-各种函数编写：
+代码实现：
  ::
 
-  def line(row,colDisp):
+  def line(row,colDisp):#负责一行灯的亮与灭，row行号，colDisp为列号数组
     r[row-1].low() #打开某行
     for j in colDisp: 
       if (j>=0 and j<=7):
@@ -66,7 +80,7 @@
     r[row-1].high()#关闭行
 
 
-  def reser_Letter():#复原
+  def reser_Letter():#重置Letter
     global Letter
     global l
     l=0
@@ -82,7 +96,7 @@
       ]
       
       
-  def reset_png():#复原
+  def reset_png():#重置png
     global png
     png=[
     "00000000",
@@ -94,7 +108,7 @@
     "",
     ""
     ]
-  def char( char, x, y, color=0xffff, background=0x0000):#取frame画图
+  def char( char, x, y, color=0xffff, background=0x0000):#通过framebuf取出字模
     global png
     global Letter
     global l
@@ -162,9 +176,6 @@
         for l in range(8):
           line(temp_show[i][0][l],temp_show[i][1][l])
 
-主要函数编写：
- ::
-
   def show_LED(word):
     global png
     lword=list(word)
@@ -194,11 +205,12 @@
  ::
 
   while True:
-	show_LED("I NEU")#最多输入8位
+	show_LED("I NEUAI")#最多输入8位
 
 
 实验现象
 ^^^^^^^^^^^^^^^^^^^^^
-可以看到一个滚动的I❤NEU在点阵上显示
+运行程序可以看到一个滚动的I❤NEUAI在点阵上显示
 
+.. image:: ../picture/ledmove.gif
 

@@ -2,20 +2,27 @@
 ------------------
 模块介绍
 ^^^^^^^^^^^^^^^^^^^^^
+Trailbreaker的Solder_Led_1B模块上有一个RGB三色发光二极管，亮度范围和典型值为1500mcd@20mA红,6000mcd@20mA绿,3000mcd@20mA蓝
+
 *实物图：
 
 .. image:: ../picture/rgb.jpg
-
+   :width: 300px
+   :height: 200px
+   
 编程学习
 ^^^^^^^^^
 打开main.py文件开始编写代码:
-导入头文件:
+
+导入Pin,Timer库:
 
  :: 
 
     from pyb import Pin,Timer
+	
+.. Note:: 导入Pin和Timer库可以控制板载的引脚和时钟。
 
-之后开始初始化引脚，时钟以及亮度，启用时钟对应的通道，并设置PWM模式，代码为：
+开始初始化引脚，时钟以及亮度，启用时钟对应的通道，并设置PWM模式，代码为：
 
  ::
 
@@ -30,7 +37,7 @@
 	gre=tm8.channel(2,Timer.PWM,pin=Pin.cpu.C7)
 	blu=tm4.channel(3,Timer.PWM,pin=Pin.cpu.B8)
 
-设置完毕后，即可编写函数实现彩虹灯灯的效果，代码如下：
+设置完毕后，编写函数实现彩虹灯的效果，代码如下：
 
  ::
 

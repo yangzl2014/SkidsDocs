@@ -1,4 +1,4 @@
-trailbreaker基本信息
+Trailbreaker基本信息
 =====================================
 
 .. contents::

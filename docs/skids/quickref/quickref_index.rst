@@ -17,3 +17,4 @@ Skids的快速参考
    snake.rst
    game2048.rst
    tetris.rst
+   wifi.rst
