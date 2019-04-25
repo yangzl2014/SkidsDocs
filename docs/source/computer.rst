@@ -35,9 +35,11 @@ EDU-TFT-1.8模块
 
  :: 
  
-from pyb import Pin,Timer
-import lcd_show,font
-from lcd_show import *
+  from pyb import Pin,Timer
+  import lcd_show
+  from lcd_show import *
+  import pyb
+  from pyb import Pin
 
 
 完整代码如下：
