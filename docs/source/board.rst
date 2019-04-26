@@ -27,6 +27,8 @@ README.txt – 包含开启Python的必要基础信息。
 
 pybcdc.inf – 这是一个Windows驱动文件，配置串行USB装置
 
+可以通过uPyCraft工具或者在Ubuntu环境下访问Trailbreaker。
+
 
 恢复出厂设置
 ^^^^^^^^^^^^^^^^^^^^^
