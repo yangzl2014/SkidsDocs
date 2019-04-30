@@ -18,3 +18,6 @@ Skids的快速参考
    game2048.rst
    tetris.rst
    wifi.rst
+   progress.rst
+   pics.rst
+   goes.rst
