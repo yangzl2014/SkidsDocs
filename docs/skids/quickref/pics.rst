@@ -11,19 +11,10 @@
 - 接收或发送消息时在屏幕上显示出来
 
 
-
-基本原理
-----------------------------
-
-
-- 功能：
-
-1. 显示界面
-2. 接收或发送消息并在屏幕上显示出来
-
-
 代码实现
 ----------------------------
+首先导入需要的库
+
 ::
 
 	import ubitmap
@@ -34,7 +25,9 @@
 	from machine import UART,Pin
 	import utime
 	from umqtt.simple import MQTTClient
-	screen.clear()
+	
+初始化pics类,配制相关参数mqtt服务器地址，端口等
+::
 
 	class pics():
 		def __init__(self):
@@ -57,12 +50,19 @@
 			self.OFF = "0"
 			self.d=" "#初始化要发送的信息
 			self.c = MQTTClient(self.CLIENT_ID, self.SERVER, self.SERVER_PORT)#定义一个mqtt实例
+
+画程序界面
+::
+
 		def drawInterface(self):#界面初始化
 			bmp1=ubitmap.BitmapFromFile("pic/boy")
 			bmp2=ubitmap.BitmapFromFile("pic/girl")
 			bmp1.draw(20,200)#显示boy图片
 			bmp2.draw(140,200)#显示girl图片
 			screen.drawline(0, 160, 240, 160, 2, 0xff0000)
+
+连接wifi接口，使用STA模式
+::
 			
 		def do_connect(self):
 			sta_if = network.WLAN(network.STA_IF)    #STA模式
@@ -77,15 +77,27 @@
 				pass
 			print('Network config:', sta_if.ifconfig())
 			gc.collect()
+
+画默认表情焦点
+::
+
 		def selectInit(self):#选择表情初始化
 			screen.drawline(20, 200, 92, 200, 2, 0xff0000)
 			screen.drawline(92, 200, 92, 272, 2, 0xff0000)
 			screen.drawline(92, 272, 20, 272, 2, 0xff0000)
 			screen.drawline(20, 272, 20, 200, 2, 0xff0000)
+
+程序界面初始化接口
+::
+
 		def displayInit(self):#初始化
 			screen.clear()
 			self.drawInterface()
 			self.selectInit()
+			
+初始化mqtt服务器连接
+::
+
 		def esp(self):
 			self.c.set_callback(self.sub_cb)    #设置回调
 			self.c.connect()
@@ -94,8 +106,8 @@
 			self.c.subscribe(self.TOPIC2)       #订阅TOPIC
 			#display.text("从微信取得信息", 20, 20, 0xf000, 0xffff)
 		
-		
-		
+键盘监听接口
+::
 		
 		def keyboardEvent(self, key):
 			if self.keymatch[key] == "Key1":#右移键，选择要发送的表情
@@ -130,6 +142,10 @@
 					bmp2.draw(140,40)
 					self.d="002"
 					self.c.publish(self.TOPIC2,self.d)#给服务器发送girl表情的号码
+
+服务器回调接口
+::
+
 		def sub_cb(self,topic, message):#从服务器接受信息
 			message = message.decode()
 			print("服务器发来信息：%s" % message)
@@ -141,7 +157,8 @@
 				bmp1=ubitmap.BitmapFromFile("pic/girl")
 				bmp1.draw(140,40)
 			
-						
+程序启动接口
+::						
 					
 		def start(self):
 			try:
@@ -161,6 +178,9 @@
 			finally:
 					self.c.disconnect()
 					print("MQTT连接断开")
+
+程序主函数
+::
 				
 	if __name__ == '__main__':
 		p = pics()
@@ -168,12 +188,7 @@
 		p.esp()
 		p.start()
 				
-			
-			
-			
-			
-			
-	
+
 效果展示
 ----------------------------
 
