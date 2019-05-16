@@ -21,3 +21,7 @@ Skids的快速参考
    progress.rst
    pics.rst
    goes.rst
+   freedom.rst
+   dayAndweather.rst
+   roll.rst
+   guess_net.rst
