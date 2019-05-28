@@ -56,6 +56,16 @@
 代码讲解
 ----------------------------
 
+- 导入库
+::
+
+    from machine import Pin
+    import random
+    import time
+    import screen
+    import ubitmap
+    import text
+
 - 构造函数，负责对硬件（屏幕显示和按键设置）进行初始化，同时将游戏的一些统计数据进行清零
 ::
 

@@ -37,6 +37,14 @@
 代码实现
 ----------------------------
 
+- 导入库
+::
+
+    from machine import Pin
+    import time
+    import screen
+    import text
+
 - 构造函数
 
   + 屏幕大小为240×320，定义按键间距为5，然后计算按键大小。
