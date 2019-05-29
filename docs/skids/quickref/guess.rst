@@ -105,18 +105,15 @@
 
   def startGame(self): 
     print("-------猜拳游戏开始-------")
+    i = 0
     while True:
-      i = 0
-      j = -1
-      for k in keys:
-        if(k.value() == 0):
-          if i!=j:
-            j = i
-            self.pressKeyboardEvent(i)
-        i = i+1;
-        if(i > 3):
-          i = 0
-      time.sleep_ms(100) #按键防抖
+        for k in self.keys:
+            if (k.value() == 0):
+                self.keyboardEvent(i)
+            i = i + 1
+            if (i > 3):
+                i = 0
+        time.sleep_ms(130)  # 按键去抖
 
 - pressKeyboardEvent()函数
 

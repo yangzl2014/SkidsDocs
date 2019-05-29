@@ -282,14 +282,11 @@
 
     # 开始运行
     def start(self):
+        i = 0
         while True:
-            i = 0
-            j = -1
             for k in self.keys:
                 if (k.value() == 0):
-                    if i != j:
-                        j = i
-                        self.keyboardEvent(i)
+                    self.keyboardEvent(i)
                 i = i + 1
                 if (i > 3):
                     i = 0
