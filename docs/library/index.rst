@@ -104,7 +104,6 @@ MicroPython实现的特定功能可在以下库中找到。
    .. toctree::
       :maxdepth: 2
 
-      lcd160cr.rst
       screen.rst
       uturtle.rst
       ubitmap.rst
