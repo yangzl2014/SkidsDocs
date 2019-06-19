@@ -87,7 +87,7 @@
 	│  │  └─air.vue         空气温湿度查询页面
 	│  └─ └─light.vue       光照查询页面
 	│     └─spo.vue         血氧查询页面
-	│	  └─skids.vue 		skids操作查询页面
+	│     └─skids.vue       skids操作查询页面
 	│     
 	├─static                存放应用引用静态资源（如图片、视频等）的地方，注意：静态资源只能存放于此
 	├─main.js               Vue初始化入口文件
