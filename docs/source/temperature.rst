@@ -41,8 +41,8 @@
 
 	def readTemp():
 	  val = adc.read()
-	  vin = val*3.3/4095  #管脚电压值
-	  vtemp = vin/2.5     #实际电压值 
+	  vin = val*3.3/4095  #管脚电压值 满量程是（3.3，4095），最大有效位12位即12个1，转成10进制为4095
+	  vtemp = vin/2.5     #实际电压值 因为电压被放大了2.5倍
 	  rtemp = (vtemp*14.7)/(3.3-vtemp) #电阻值
 	  ctemp = a*rtemp + b  #温度
 	  
