@@ -26,6 +26,7 @@ Trailbreaker快速参考
    computer
    LED64
    Chinese
+   temperature
 ==================
 
 * :ref:`genindex`
