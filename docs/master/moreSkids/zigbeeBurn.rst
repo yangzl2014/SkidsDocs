@@ -15,18 +15,18 @@ ZigBee固件烧写
 -----------------------
 
   + 工具名称：JN-SW-4107
-  + 下载地址：`JN-SW-4107<https://www.nxp.com/cn/products/wireless/proprietary-ieee-802.15.4-based/zigbee/zigbee-3.0:ZIGBEE-3-0>`
+  + 下载地址：`JN-SW-4107 <https://www.nxp.com/cn/products/wireless/proprietary-ieee-802.15.4-based/zigbee/zigbee-3.0:ZIGBEE-3-0>`
 
 烧写模式
 -----------------------
 
 烧写前需先将ZigBee进入boot模式，原理都是boot引脚接地后重启：
 
-  + ZigBee模块：用USB线将其连接至电脑后，按下boot键的同时再按reset键
+(1) ZigBee模块：用USB线将其连接至电脑后，按下boot键的同时再按reset键
 
 .. image:: img/zigbee.png
 
-  + Skids上ZigBee：将boot引脚接GND后，再将其连接至电脑
+(2) Skids上ZigBee：将boot引脚接GND后，再将其连接至电脑
 
 .. image:: img/skids1c.png
 
@@ -53,4 +53,3 @@ ZigBee固件烧写
 4. 等待进度条走完，烧写完成
 
 .. image:: img/burn4.png
-
