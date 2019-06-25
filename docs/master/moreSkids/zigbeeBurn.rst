@@ -15,7 +15,7 @@ ZigBee固件烧写
 -----------------------
 
   + 工具名称：JN-SW-4107
-  + 下载地址： `JN-SW-4107 <https://www.nxp.com/cn/products/wireless/proprietary-ieee-802.15.4-based/zigbee/zigbee-3.0:ZIGBEE-3-0>`_
+  + 下载地址：`JN-SW-4107 <https://www.nxp.com/cn/products/wireless/proprietary-ieee-802.15.4-based/zigbee/zigbee-3.0:ZIGBEE-3-0>`_
 
 烧写模式
 -----------------------
