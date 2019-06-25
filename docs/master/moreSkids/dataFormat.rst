@@ -15,6 +15,7 @@ AT指令是ZigBee之间的通信数据格式
   + fid为该AT指令帧的序号，位于区间[1,255]
   + 其他字段内容固定
 ::
+
 	7E    00   05    03                       01   FF FF  98 98 98 98 98
 	head  lenH lenL  AT_DT_2COOR_FRAME(0x03)  fid  save   具体数据
 
@@ -23,12 +24,14 @@ AT指令是ZigBee之间的通信数据格式
   + 长度字段值为具体数据字段的长度
   + MAC地址有8位长地址2位短地址组成，指的是发送该指令的ZigBee EndDevice的MAC地址
 ::
+
 	7E    00   05    88                       01   55 50  00                00 15 8D 00 01 15 93 1C  93 1C               98 98 98 98 98
 	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  U  P   AT_RESP_OK(0x00)  macaddr(8个byte)         shortaddr(2个byte)  具体数据
 
 (3) 发给ZigBee Coordinator的UART的AT指令的格式
   + 长度字段值为整个帧长-1
 ::
+
 	7E    00   13    10                          01   00 15 8D 00 01 15 93 1C  93 1C               00 00      98 98 98 98 98
 	head  lenH lenL  AT_TRANSE_DATA_FRAME(0x10)  fid  macaddr(8个byte)         shortaddr(2个byte)  0x00 0x00  具体数据
 
@@ -36,6 +39,7 @@ AT指令是ZigBee之间的通信数据格式
   + 向ZigBee Coordinator的UART发送数据(3)，就会在ZigBee EndDevice的UART接收到该格式AT指令
   + 长度字段值为具体数据字段的长度+7
 ::
+
 	7E    00   0A    88                       01   44 54  00                98 98 98 98 98  F0
 	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  D  T   AT_RESP_OK(0x00)  具体数据        tail
 
@@ -43,6 +47,7 @@ AT指令是ZigBee之间的通信数据格式
   + ZigBee EndDevice自身产生的登录类型数据，达到ZigBee EndDevice的UART时，就是如下格式AT指令
   + 长度字段值为MAC地址字段的长度+5
 ::
+
 	7E    00   05    88                       01   78 74  00                00 15 8D 00 01 15 93 1C  93 1C               F0
 	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  D  J   AT_RESP_OK(0x00)  macaddr(8个byte)         shortaddr(2个byte)  tail
 
@@ -52,6 +57,7 @@ AT指令是ZigBee之间的通信数据格式
   + count为所包含的MAC地址的个数
   + 长度字段值为MAC地址字段长和同步位长和+5
 ::
+
 	7E    00   05    88                       01   67 76  00                00 00 00 00 00  01     00 15 8D 00 01 15 93 1C  93 1C               F0
 	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  C  L   AT_RESP_OK(0x00)                  count  macaddr(8个byte)         shortaddr(2个byte)  tail
 
@@ -59,6 +65,7 @@ AT指令是ZigBee之间的通信数据格式
   + ZigBee Coordinator接收到(3)时，发回的响应AT指令
   + 长度字段值为5
 ::
+
 	7E    00   05    88                       01   78 78  00                F0
 	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  D  D   AT_RESP_OK(0x00)  tail
 
@@ -67,6 +74,7 @@ AT指令是ZigBee之间的通信数据格式
   + 长度字段值为5
   + 该AT指令现在还未启用
 ::
+
 	7E    00   05    88                       01   78 84  00                F0
 	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  D  T   AT_RESP_OK(0x00)  tail
 
