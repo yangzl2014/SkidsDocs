@@ -1,7 +1,6 @@
 .. _introduction:
 
-
-简要说明
+TB to Moree Skids介绍
 =======================
 
 原理图
