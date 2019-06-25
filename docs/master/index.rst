@@ -9,4 +9,5 @@
 .. toctree::
    :maxdepth: 2
 
+   moreSkids/index.rst
    smallAPP/index.rst
