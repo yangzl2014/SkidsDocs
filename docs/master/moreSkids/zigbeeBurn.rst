@@ -26,7 +26,7 @@ ZigBee固件烧写
 
 .. image:: img/zigbee.png
 
-(2) Skids上ZigBee：将boot引脚接GND后，再将其连接至电脑
+(2) Skids上的ZigBee：将boot引脚接GND后，再将其连接至电脑
 
 .. image:: img/skids1c.png
 
