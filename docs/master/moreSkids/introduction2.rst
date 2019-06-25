@@ -1,6 +1,6 @@
 .. _introduction:
 
-TB to Moree Skids介绍
+TB to More Skids介绍
 =======================
 
 原理图
