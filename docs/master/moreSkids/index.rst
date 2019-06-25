@@ -9,4 +9,6 @@
 
    introduction1.rst
    introduction2.rst
+   zigbeeBurn.rst
+   dataFormat.rst
 
