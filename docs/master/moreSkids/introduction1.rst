@@ -6,23 +6,21 @@ TB to One Skids介绍
 原理图
 -----------------------
 
-.. image:: img/architecture.jpg
+.. image:: img/architecture1.jpg
 
 实物图
 -----------------------
 
-.. image:: img/connect.jpg
+.. image:: img/connect1.jpg
 
 程序说明
 -----------------------
 
 TBSource(Sensor Controller):
-
   + sensor.py：传感器控制库，包括DHT11、BH1750、SPO2类
   + TB_Sensor_EndDevice.py：主程序，获取传感数据，封装成AT指令，通过UART发给ZigBee模块
 
 SkidsSource(Gateway):
-
   + umqtt/simple.py：MQTT函数库
   + ATRT.py：AT指令收发库，用于对ZigBee协调器UART发来的AT指令解析、封装数据成AT指令
   + MSGP.py：MQTT消息处理库，用于对MQTT主题收到的消息进行解析或封装
