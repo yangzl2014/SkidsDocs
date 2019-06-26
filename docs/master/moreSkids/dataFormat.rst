@@ -49,7 +49,7 @@ AT指令是ZigBee之间的通信数据格式
 ::
 
 	7E    00   05    88                       01   78 74  00                00 15 8D 00 01 15 93 1C  93 1C               F0
-	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  D  J   AT_RESP_OK(0x00)  macaddr(8个byte)         shortaddr(2个byte)  tail
+	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  N  J   AT_RESP_OK(0x00)  macaddr(8个byte)         shortaddr(2个byte)  tail
 
 (6) 从ZigBee Coordinator的UART接收的AT指令的格式（CL类型）
   + ZigBee Coordinator查询所得到ZigBee EndDevice MAC地址封装成的AT指令
