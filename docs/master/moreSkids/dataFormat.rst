@@ -29,15 +29,15 @@ AT指令是ZigBee之间的通信数据格式
 	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  U  P   AT_RESP_OK(0x00)  macaddr(8个byte)         shortaddr(2个byte)  具体数据
 
 (3) 发给ZigBee Coordinator的UART的AT指令的格式
-  + 长度字段值为整个帧长-1
+  + 长度字段值为整个帧长
 ::
 
-	7E    00   13    10                          01   00 15 8D 00 01 15 93 1C  93 1C               00 00      98 98 98 98 98
+	7E    00   16    10                          01   00 15 8D 00 01 15 93 1C  93 1C               00 00      98 98 98 98 98
 	head  lenH lenL  AT_TRANSE_DATA_FRAME(0x10)  fid  macaddr(8个byte)         shortaddr(2个byte)  0x00 0x00  具体数据
 
 (4) 从ZigBee EndDevice的UART接收的AT指令的格式
   + 向ZigBee Coordinator的UART发送数据(3)，就会在ZigBee EndDevice的UART接收到该格式AT指令
-  + 长度字段值为具体数据字段的长度+7
+  + 长度字段值为具体数据字段的长度+5
 ::
 
 	7E    00   0A    88                       01   44 54  00                98 98 98 98 98  F0
@@ -48,7 +48,7 @@ AT指令是ZigBee之间的通信数据格式
   + 长度字段值为MAC地址字段的长度+5
 ::
 
-	7E    00   05    88                       01   78 74  00                00 15 8D 00 01 15 93 1C  93 1C               F0
+	7E    00   0F    88                       01   78 74  00                00 15 8D 00 01 15 93 1C  93 1C               F0
 	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  N  J   AT_RESP_OK(0x00)  macaddr(8个byte)         shortaddr(2个byte)  tail
 
 (6) 从ZigBee Coordinator的UART接收的AT指令的格式（CL类型）
@@ -58,7 +58,7 @@ AT指令是ZigBee之间的通信数据格式
   + 长度字段值为MAC地址字段长和同步位长和+5
 ::
 
-	7E    00   05    88                       01   67 76  00                00 00 00 00 00  01     00 15 8D 00 01 15 93 1C  93 1C               F0
+	7E    00   15    88                       01   67 76  00                00 00 00 00 00  01     00 15 8D 00 01 15 93 1C  93 1C               F0
 	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  C  L   AT_RESP_OK(0x00)                  count  macaddr(8个byte)         shortaddr(2个byte)  tail
 
 (7) 从ZigBee Coordinator的UART接收的AT指令的格式（DD类型）
