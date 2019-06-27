@@ -10,4 +10,5 @@
    :maxdepth: 2
 
    moreSkids/index.rst
+   guessGame/index.rst
    smallAPP/index.rst
