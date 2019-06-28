@@ -21,3 +21,6 @@ Gateway_source:
   + 将EndDevice_source两个程序下载到终端Skids板上，将Gateway_source两个程序下载到网关Skids板上
   + 先重启网关Skids，运行主程序；再重启终端Skids，运行主程序；然后两个Skids之间就可以进行猜拳游戏
 
+  .. image:: img/guess.jpg
+    :alt: guess
+    :width: 600px
