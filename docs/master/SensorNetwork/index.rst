@@ -1,14 +1,14 @@
 .. _index:
 
-传感网络建设
+传感网络搭建
 ------------------------------------
 
 .. toctree::
    :maxdepth: 2
    :numbered:
 
-   introduction1.rst
-   introduction2.rst
+   simpleSN.rst
+   complexSN.rst
    zigbeeBurn.rst
    dataFormat.rst
 

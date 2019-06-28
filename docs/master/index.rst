@@ -9,6 +9,6 @@
 .. toctree::
    :maxdepth: 2
 
-   moreSkids/index.rst
-   guessGame/index.rst
+   SensorNetwork/index.rst
+   GuessGame/index.rst
    smallAPP/index.rst

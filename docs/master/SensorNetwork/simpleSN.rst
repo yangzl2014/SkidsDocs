@@ -1,14 +1,14 @@
 .. _introduction:
 
-TB to One Skids介绍
+简单的传感网络介绍
 =======================
 
-原理图
+架构图
 -----------------------
 
 .. image:: img/architecture1.jpg
 
-实物图
+连接图
 -----------------------
 
 .. image:: img/connect1.jpg

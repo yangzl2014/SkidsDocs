@@ -1,14 +1,14 @@
 .. _introduction:
 
-TB to More Skids介绍
+复杂的传感网络介绍
 =======================
 
-原理图
+架构图
 -----------------------
 
 .. image:: img/architecture2.jpg
 
-实物图
+连接图
 -----------------------
 
 .. image:: img/connect2.jpg
