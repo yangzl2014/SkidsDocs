@@ -8,3 +8,4 @@ ZigBee网络版猜拳游戏
    :numbered:
 
    introduction.rst
+   principle.rst
