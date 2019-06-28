@@ -19,7 +19,7 @@
   + 玩家手势通过不同的按键来表示
   + 最下面的区域显示游戏胜负情况的汇总结果
 
-  .. image:: img/guess1.png
+  .. image:: img/guess1.jpg
     :alt: guess
     :width: 340px
 
