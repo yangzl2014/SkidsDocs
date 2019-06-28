@@ -23,4 +23,4 @@ Gateway_source:
 
   .. image:: img/guess.jpg
     :alt: guess
-    :width: 600px
+    :width: 640px
