@@ -21,7 +21,7 @@
 
   .. image:: img/guess1.jpg
     :alt: guess
-    :width: 300px
+    :width: 270px
 
 - **按键排列**
 
@@ -71,16 +71,16 @@
 猜拳游戏中用于交互的数据就封装在AT指令的数据字段，共12字节，其格式如下：
 
 [type]+[playerId]+[computerId]+[choice]
-  + type（1字节）：数据类型，0代表该数据是邀请或邀请响应数据，1代表该数据是出拳信息数据
-  + playerId（5字节）：自己的ID号
-  + computerId（5字节）：对方的ID号
-  + choice（1字节）：type为0时choice固定为0；type为1时，choice代表出拳的选择：1剪刀2石头3布
+  + type：1字节，数据类型，0代表是邀请或邀请响应数据，1代表是出拳信息数据
+  + playerId：5字节，自己的ID号
+  + computerId：5字节，对方的ID号
+  + choice：1字节，type为0时choice为0；type为1时，choice代表出拳的选择：1剪刀2石头3布
 
-例如
+例如：
 ::
     邀请或邀请响应数据：
         16进制： 00    53 4B 30 30 31  53 4B 30 30 32  00
-        bytes：  \x00  SK001           SK002           \x00
+        bytes： \x00   SK001           SK002          \x00
     出拳信息数据：
         16进制： 01    53 4B 30 30 31  53 4B 30 30 32  02
-        bytes：  \x01  SK001           SK002           \x02
+        bytes： \x01   SK001           SK002          \x02
