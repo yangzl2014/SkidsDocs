@@ -71,7 +71,6 @@
 猜拳游戏中用于交互的数据就封装在AT指令的数据字段，共12字节，其格式如下：
 
 [type]+[playerId]+[computerId]+[choice]
-
   + type（1字节）：数据类型，0代表该数据是邀请或邀请响应数据，1代表该数据是出拳信息数据
   + playerId（5字节）：自己的ID号
   + computerId（5字节）：对方的ID号
