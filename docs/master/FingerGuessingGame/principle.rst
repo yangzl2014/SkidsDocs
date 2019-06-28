@@ -21,13 +21,13 @@
 
   .. image:: img/guess1.jpg
     :alt: guess
-    :width: 340px
+    :width: 300px
 
 - **按键排列**
 
   .. image:: img/guess2.png
     :alt: guess
-    :width: 440px
+    :width: 450px
 
 
 网络连接
@@ -78,6 +78,7 @@
   + choice（1字节）：type为0时choice固定为0；type为1时，choice代表出拳的选择：1剪刀2石头3布
 
 例如::
+
     邀请或邀请响应数据：
         16进制： 00    53 4B 30 30 31  53 4B 30 30 32  00
         bytes：  \x00  SK001           SK002           \x00
