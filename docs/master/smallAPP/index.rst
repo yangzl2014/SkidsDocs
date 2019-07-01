@@ -12,15 +12,15 @@
     :alt: hbuilderx
     :width: 640px
 
-- 创建项目，在点击工具栏里的文件 -> 新建 -> 项目：
+- 创建项目，在点击工具栏里的文件 -> 导入 -> 本地目录：
 
-.. image:: ../../picture/create1.png
+.. image:: ../../picture/create6.png
     :alt: hbuilderx
     :width: 640px
 
-选择uni-app，输入工程名，如：hello-uniapp，点击创建，即可成功创建 uni-app。
+选择工程名称“connecttohardware”，工程导入后会在左侧的工程栏中显示。
 
-.. image:: ../../picture/create2.png
+.. image:: ../../picture/create7.png
     :alt: hbuilderx
     :width: 640px
 
@@ -53,6 +53,14 @@
     :width: 640px
 
 3，在微信开小程序发者工具中，导入生成的微信小程序项目，测试项目代码运行正常后，点击“上传”按钮，之后按照 “提交审核” => “发布” 小程序标准流程，逐步操作即可，详细查看：`微信教程: <https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/release.html#%E5%8F%91%E5%B8%83%E4%B8%8A%E7%BA%BF>`_。
+
+
+操作流程
+----------------------------
+
+.. image:: ../../picture/create8.png
+    :alt: hbuilderx
+    :width: 640px
 
 
 代码实现
@@ -568,4 +576,9 @@
 
 其它页面代码与此类似。
 
+效果展示
+----------------------------
 
+.. image:: ../../picture/create10.png
+    :alt: hbuilderx
+    :width: 320px
