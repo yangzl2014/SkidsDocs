@@ -9,4 +9,6 @@
 .. toctree::
    :maxdepth: 2
 
+   SensorNetwork/index.rst
+   FingerGuessingGame/index.rst
    smallAPP/index.rst
