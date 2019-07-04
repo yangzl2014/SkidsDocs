@@ -6,6 +6,7 @@ ZigBee固件烧写
 固件介绍
 -----------------------
 
+Firmware(dynamic)：
   + PAN_Coordinator_JN5169.bin：ZigBee Coordinator固件，烧写在网关Skids的ZigBee上
   + SK_EndDevice_JN5169.bin：ZigBee EndDevice固件，烧写在终端Skids的ZigBee上
   + TB_EndDevice_JN5169.bin：ZigBee EndDevice固件，烧写在ZigBee模块的ZigBee上
