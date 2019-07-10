@@ -7,7 +7,6 @@ UART类 – 双向串行通信总线
 UART执行标准UART/USART双向串行通信协议。其物理层包括两条线：RX和TX。通信单元为8位或9位宽的字符（勿与字符串字符混淆）。
 
 
-.. only:: port_pyboard or port_moxingstm32f4
 
     UART对象可通过下列方式创建和初始化::
 
@@ -15,17 +14,6 @@ UART执行标准UART/USART双向串行通信协议。其物理层包括两条线
 
         uart = UART(1, 9600)                         # init with given baudrate
         uart.init(9600, bits=8, parity=None, stop=1) # init with given parameters
-
-.. only:: port_openmvcam
-
-    UART对象可通过下列方式创建和初始化::
-
-        from pyb import UART
-
-        uart = UART(3, 9600, timeout_char=1000)                         # i使用给定波特率初始化
-        uart.init(9600, bits=8, parity=None, stop=1, timeout_char=1000) # 使用给定参数初始化
-
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     位数可为7、8、9。奇偶性可为None、0（偶）、1（奇）。停止位可为1或2。
 
@@ -38,8 +26,6 @@ UART对象与流对象相似，其读取与写入均使用流对象方法::
     uart.readline()     # read a line 读取一条线
     uart.readinto(buf)  # read and store into the given buffer 读取并存入缓冲区
     uart.write('abc')   # write the 3 characters 写入3个字符
-
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     单个字符可通过下列方法读取/写入::
 
@@ -55,8 +41,6 @@ UART对象与流对象相似，其读取与写入均使用流对象方法::
 
 构造函数
 ------------
-
-.. only:: port_pyboard
 
     .. class:: pyb.UART(bus, ...)
 
@@ -109,8 +93,6 @@ UART对象与流对象相似，其读取与写入均使用流对象方法::
 方法
 -------
 
-.. only:: port_pyboard or port_moxingstm32f4
-
     .. method:: UART.init(baudrate, bits=8, parity=None, stop=1, \*, timeout=1000, flow=0, timeout_char=0, read_buf_len=64)
 
        使用给定参数初始化UART总线:
@@ -153,8 +135,6 @@ UART对象与流对象相似，其读取与写入均使用流对象方法::
 .. method:: UART.deinit()
 
    关闭UART总线。
-
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     .. method:: UART.any()
 
@@ -212,8 +192,6 @@ UART对象与流对象相似，其读取与写入均使用流对象方法::
 常量
 ---------
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
-
     .. data:: UART.RTS
     .. data:: UART.CTS
 
@@ -221,8 +199,6 @@ UART对象与流对象相似，其读取与写入均使用流对象方法::
 
 流控制
 ------------
-
-.. only:: port_pyboard
 
     在Pyboards V1和V1.1上， ``UART(2)`` 和 ``UART(3)`` 使用以下引脚支持硬件流控制:
 
@@ -266,7 +242,6 @@ UART对象与流对象相似，其读取与写入均使用流对象方法::
 
     若未使用缓冲输入（ ``read_buf_len`` == 0），接收下一个字符则将导致 ``nRTS`` 出现 ``False`` ，此状态一直持续到字符被读取。
 
-.. only:: port_pyboard or port_moxingstm32f4
 
     在Pyboards V1和V1.1上， ``UART(2)`` 和 ``UART(3)`` 使用以下引脚支持硬件流控制:
 
