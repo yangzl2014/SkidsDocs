@@ -6,7 +6,6 @@ SPI类 – 串行外设接口
 
 SPI是由主机驱动的串行协议。其物理层包括3道线：SCK、MOSI、MISO。
 
-.. only:: port_pyboard
 
     请参见I2C的用法示例；SPI十分类似。主要区别在于初始化SPI总线的参数::
 
@@ -42,7 +41,6 @@ SPI是由主机驱动的串行协议。其物理层包括3道线：SCK、MOSI、
 构建函数
 ------------
 
-.. only:: port_pyboard
 
     .. class:: pyb.SPI(bus, ...)
 
@@ -87,7 +85,6 @@ SPI是由主机驱动的串行协议。其物理层包括3道线：SCK、MOSI、
 
    关闭SPI总线。
 
-.. only:: port_pyboard or port_moxingstm32f4
 
     .. method:: SPI.init(mode, baudrate=328125, \*, prescaler, polarity=1, phase=0, bits=8, firstbit=SPI.MSB, ti=False, crc=None)
 
@@ -130,8 +127,6 @@ SPI是由主机驱动的串行协议。其物理层包括3道线：SCK、MOSI、
 
        打印SPI对象将显示计算所得波特率和所选择的预分频数。
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
-
     .. method:: SPI.recv(recv, \*, timeout=5000)
 
        在总线上接收数据：
@@ -162,8 +157,6 @@ SPI是由主机驱动的串行协议。其物理层包括3道线：SCK、MOSI、
 
 常量
 ---------
-
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     .. data:: SPI.MASTER
     .. data:: SPI.SLAVE

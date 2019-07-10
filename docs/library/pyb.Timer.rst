@@ -4,8 +4,6 @@
 Timer类 – 控制内部定时器
 ======================================
 
-.. only:: port_pyboard
-
     定时器可用于多种任务。目前，仅实现了最简单的情况：周期性调用函数。
 
     每个定时器都包含一个以某一比率计数的计数器。其计数的频率为外设时钟频率（Hz为单位）除以定时器预分频器。
@@ -109,8 +107,6 @@ Timer类 – 控制内部定时器
 方法
 -------
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
-
     .. method:: Timer.init(\*, freq, prescaler, period)
 
        初始化定时器。初始化必须通过频率(单位：Hz)或通过预标量和周期进行::
@@ -149,19 +145,13 @@ Timer类 – 控制内部定时器
 
    反初始化定时器。
 
-   .. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
-
       禁用回调（以及关联的中断请求）。
 
    禁用任何通道回调（以及关联的中断请求）。停用定时器，并禁用定时器外围设备。
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
-
     .. method:: Timer.callback(fun)
 
        设置定时器触发时所调用的函数。 ``fun`` 是被传递的1参数，即定时器对象。若 ``fun`` 为 ``None`` ，则禁用回调。
-
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     .. method:: Timer.channel(channel, mode, ...)
 
@@ -239,19 +229,13 @@ Timer类 – 控制内部定时器
                ch2 = timer.channel(1, pyb.Timer.PWM, pin=pyb.Pin("P7"), pulse_width=8000)
                ch3 = timer.channel(2, pyb.Timer.PWM, pin=pyb.Pin("P8"), pulse_width=16000)
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
-
     .. method:: Timer.counter([value])
 
        获取或设置定时器。
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
-
     .. method:: Timer.freq([value])
 
        获取或设置定时器频率（改变分频数与周期）。
-
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     .. method:: Timer.period([value])
 
@@ -275,13 +259,9 @@ TimerChannel类 — 为定时器建立一个通道
 方法
 -------
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
-
     .. method:: timerchannel.callback(fun)
 
        设置定时器触发时调用的函数。``fun`` 是被传递的1参数，即定时器对象。若 ``fun`` 为 ``None`` ，则禁用回调。
-
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     .. method:: timerchannel.capture([value])
 
