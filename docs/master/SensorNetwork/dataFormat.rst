@@ -78,6 +78,14 @@ AT指令是ZigBee之间的通信数据格式
 	7E    00   05    88                       01   44 54  00                F0
 	head  lenH lenL  AT_RESPONSE_FRAME(0x88)  fid  D  T   AT_RESP_OK(0x00)  tail
 
+(9) 用于设置ZigBee组网的PANID
+  + 长度字段值为2
+  + PANID为最后两个字节
+::
+
+	7E    00   02    01                        01   49 44  17 01
+	head  lenH lenL  AT_SETPANNID_FRAME(0x01)  fid  I  D   PANID
+
 
 传感与控制数据格式
 -----------------------

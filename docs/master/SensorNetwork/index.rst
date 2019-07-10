@@ -10,5 +10,6 @@
    simpleSN.rst
    complexSN.rst
    zigbeeBurn.rst
+   mqtt.rst
    dataFormat.rst
 
