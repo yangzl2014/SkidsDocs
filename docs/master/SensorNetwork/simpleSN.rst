@@ -30,8 +30,10 @@ SkidsSource(Gateway):
 使用说明
 -----------------------
 
-首先修改TB_Sensor_EndDevice.py和SK_Gateway_si.py中的PANID，要唯一，以建立自己的ZigBee网，防止与其他人冲突。
-  + 将TBSource(Sensor Controller)拷贝到连接着传感器模块的TB板的PYBFLASH中，主程序名改为main.py，然后复位启动。
-  + 将SkidsSource(Gateway)按以上目录结构用uPyCraft工具下载到网关Skids（ZigBee烧的是协调器固件）中，然后运行主程序。
-  + 之后网关Skids在LCD上显示传感数据信息，并发布到MQTT主题。
-  + 注：如果要修改设置的PANID，需先重启skids，再执行主程序。
+1. 修改TB_Sensor_EndDevice.py和SK_Gateway_si.py中的PANID，要唯一，以建立自己的ZigBee网，防止与其他人冲突。
+#. 修改SK_Gateway_si.py中的WiFi名称和密码。
+#. 将TBSource(Sensor Controller)拷贝到连接着传感器模块的TB板的PYBFLASH中，主程序名改为main.py，然后复位启动。
+#. 将SkidsSource(Gateway)按以上目录结构用uPyCraft工具下载到网关Skids（ZigBee烧的是协调器固件）中，然后运行主程序。
+#. 网关Skids在LCD上显示传感数据信息，并发布到MQTT主题。
+
+（注：如果要修改设置的PANID，需先重启skids，再执行主程序。）
