@@ -28,6 +28,7 @@ Trailbreaker快速参考
    Chinese
    temperature
    SPO2
+   CO2
 
 =====================
 
