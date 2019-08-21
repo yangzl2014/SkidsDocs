@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Trailbreaker快速参考
-======================================
+=====================
 
 .. toctree::
    :maxdepth: 2
@@ -27,7 +27,9 @@ Trailbreaker快速参考
    LED64
    Chinese
    temperature
-==================
+   SPO2
+
+=====================
 
 * :ref:`genindex`
 * :ref:`modindex`
