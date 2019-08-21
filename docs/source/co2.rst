@@ -11,9 +11,9 @@ MH-Z14A二氧化碳气体传感器（以下简称传感器）是一个通用智�
 内置温度补偿；同时具有数字输出、模拟输出及PWM输出，方便使用。
 该传感器是将成熟的红外吸收气体检测技术与精密光路设计、精良电路设计紧密结合而制作出的高性能传感器。
 
-.. image:: img/calculator1.PNG
-    :alt: calculator
-    :width: 640px
+.. image:: img/carbon1.jpg
+    :alt: carbon dioxide
+    :width: 440px
 
 接线方法
 ----------------------------
@@ -23,8 +23,8 @@ MH-Z14A二氧化碳气体传感器（以下简称传感器）是一个通用智�
 二氧化碳模块V+连接TB板5V
 二氧化碳模块V-连接TB板GND
 
-.. image:: img/calculator2.PNG
-    :alt: calculator
+.. image:: img/carbon2.jpg
+    :alt: carbon dioxide
     :width: 640px
 
 实现方法
@@ -91,3 +91,8 @@ MH-Z14A二氧化碳气体传感器（以下简称传感器）是一个通用智�
             concentration = co2.getConcentration()
             print(concentration)
             time.sleep(1)
+
+.. image:: img/carbon3.png
+    :alt: carbon dioxide
+    :width: 540px
+
