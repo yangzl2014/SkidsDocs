@@ -136,6 +136,6 @@ RJ48线一端需接在血氧模块的J5口，另一端需接在Trailbeaker开发
                 print('BloodOxygen: ' + str(spList[4]))
             sp.sleep(2)
 
-  .. image:: img/blood4.png
+.. image:: img/blood4.png
     :alt: blood
     :width: 540px

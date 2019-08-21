@@ -1,6 +1,6 @@
-.. CO2:
+.. CarbonDioxide:
 
-CO2模块
+CO2传感器
 ============================
 
 模块介绍
@@ -95,4 +95,3 @@ MH-Z14A二氧化碳气体传感器（以下简称传感器）是一个通用智�
 .. image:: img/carbon3.png
     :alt: carbon dioxide
     :width: 540px
-
