@@ -29,6 +29,7 @@ Trailbreaker快速参考
    temperature
    SPO2
    CO2
+   soil
 
 =====================
 
