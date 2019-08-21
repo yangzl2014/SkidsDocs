@@ -19,14 +19,14 @@ ZZSGTHC模块引线说明：
   - 将白色线接在TB板的ADC引脚，用于读取其输出模拟电压
   - 将蓝色线接在TB板的GND引脚，作为参考电压值
 
-.. image:: img/calculator1.PNG
-    :alt: calculator
+.. image:: img/soil1.jpg
+    :alt: soil
     :width: 640px
 
 计算公式
 ----------------------------
 
-P(湿度%) = V(电压mv) / 50% / 100
+P(湿度%) = V(电压mv) * 2 / 100
 
 代码实现
 ----------------------------
@@ -58,3 +58,7 @@ P(湿度%) = V(电压mv) / 50% / 100
             moisture = soil.getSoilMoisture()
             print(moisture)
             time.sleep(1)
+
+.. image:: img/soil2.png
+    :alt: soil
+    :width: 540px
