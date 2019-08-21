@@ -8,21 +8,21 @@
 
 将血氧模块通过RJ48线连接至Trailbeaker开发板，然后使用Trailbeaker的UART与血氧模块的串口进行通信。
 
-.. image:: img/calculator1.PNG
-    :alt: calculator
+.. image:: img/blood1.jpg
+    :alt: blood
     :width: 640px
 
 在这里，我们使用Trailbeaker的UART6，根据血氧模块和Trailbeaker开发板的如下电路原理图，可知
 RJ48线一端需接在血氧模块的J5口，另一端需接在Trailbeaker开发板包含Y1、Y2引脚的口上。
 
-.. image:: img/calculator2.PNG
-    :alt: calculator
-    :width: 640px
+.. image:: img/blood2.png
+    :alt: blood
+    :width: 540px
 
 串口通信协议
 ----------------------------
 
-串并通信设置：
+串口通信设置：
 
   - 数据格式：起始位+8位数据位+1位停止位，奇校验
   - 波特率：4800 baud
@@ -31,9 +31,9 @@ RJ48线一端需接在血氧模块的J5口，另一端需接在Trailbeaker开发
 
   - 发送数据：5字节格式，每秒钟60个包，第七位为同步位。
 
-  .. image:: img/calculator2.PNG
-    :alt: calculator
-    :width: 640px
+  .. image:: img/blood3.png
+    :alt: blood
+    :width: 540px
 
 因此，我们可以通过调用readchar()函数，每次读入一个字节，找到包头后将之后的五个字节依次读入，
 再按照通信协议进行解析。解析完后将相应的数据显示在屏幕上。
@@ -135,3 +135,7 @@ RJ48线一端需接在血氧模块的J5口，另一端需接在Trailbeaker开发
                 print('PulseRate: ' + str(spList[3]))
                 print('BloodOxygen: ' + str(spList[4]))
             sp.sleep(2)
+
+  .. image:: img/blood4.png
+    :alt: blood
+    :width: 540px
