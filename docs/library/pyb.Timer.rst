@@ -149,11 +149,11 @@ Timer类 – 控制内部定时器
 
    禁用任何通道回调（以及关联的中断请求）。停用定时器，并禁用定时器外围设备。
 
-    .. method:: Timer.callback(fun)
+.. method:: Timer.callback(fun)
 
        设置定时器触发时所调用的函数。 ``fun`` 是被传递的1参数，即定时器对象。若 ``fun`` 为 ``None`` ，则禁用回调。
 
-    .. method:: Timer.channel(channel, mode, ...)
+.. method:: Timer.channel(channel, mode, ...)
 
        若只有一个通道被传递，则返回一个先前初始化的通道对象（若无先前通道，则 ``None`` ）。
 
@@ -213,7 +213,7 @@ Timer类 – 控制内部定时器
          - 仅在CH1和CH2上运行（而非CH1N或CH2N）。
          - 设置编码模式时忽略通道数。
 
-       .. only:: port_pyboard
+.. only:: port_pyboard
 
            PWM Example::
 
@@ -221,7 +221,7 @@ Timer类 – 控制内部定时器
                ch2 = timer.channel(2, pyb.Timer.PWM, pin=pyb.Pin.board.X2, pulse_width=8000)
                ch3 = timer.channel(3, pyb.Timer.PWM, pin=pyb.Pin.board.X3, pulse_width=16000)
 
-       .. only:: port_pyboard
+.. only:: port_pyboard
 
            PWM示例::
 
@@ -229,23 +229,23 @@ Timer类 – 控制内部定时器
                ch2 = timer.channel(1, pyb.Timer.PWM, pin=pyb.Pin("P7"), pulse_width=8000)
                ch3 = timer.channel(2, pyb.Timer.PWM, pin=pyb.Pin("P8"), pulse_width=16000)
 
-    .. method:: Timer.counter([value])
+.. method:: Timer.counter([value])
 
        获取或设置定时器。
 
-    .. method:: Timer.freq([value])
+.. method:: Timer.freq([value])
 
        获取或设置定时器频率（改变分频数与周期）。
 
-    .. method:: Timer.period([value])
+.. method:: Timer.period([value])
 
        获取或设置定时器周期。
 
-    .. method:: Timer.prescaler([value])
+.. method:: Timer.prescaler([value])
 
        获取或设置定时器分频数。
 
-    .. method:: Timer.source_freq()
+.. method:: Timer.source_freq()
 
        获取时钟源的频率。
 
