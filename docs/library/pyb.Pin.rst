@@ -8,7 +8,7 @@ Pin类 – 控制I/O 引脚
 
 应用模式:
 
-.. only:: port_pyboard
+
 
     所有板上的引脚都预先定义为pyb.Pin.board.Name::
 
@@ -63,59 +63,6 @@ Pin类 – 控制I/O 引脚
 
     所有引脚对象都通过引脚映射器来生成一个GPIO引脚。
 
-.. only:: port_openmvcam or port_moxingstm32f4
-
-    所有板上的引脚都预先定义为pyb.Pin.board.Name::
-
-        x1_pin = pyb.Pin.board.P0
-
-        g = pyb.Pin(pyb.Pin.board.P0, pyb.Pin.IN)
-
-    与板上的引脚相对应的CPU引脚都可作为 ``pyb.cpu.Name`` 使用。CPU引脚的名称即为后跟引脚码的端口字母。
-    在OpenMV中， ``pyb.Pin.board.P0`` 和 ``pyb.Pin.cpu.PB15`` 是同一引脚。
-
-    您也可使用字符串::
-
-        g = pyb.Pin('P0', pyb.Pin.OUT_PP)
-
-    使用者可添加自己的名称::
-
-        MyMapperDict = { 'LeftMotorDir' : pyb.Pin.cpu.PB15 }
-        pyb.Pin.dict(MyMapperDict)
-        g = pyb.Pin("LeftMotorDir", pyb.Pin.OUT_OD)
-
-    也可查询映射::
-
-        pin = pyb.Pin("LeftMotorDir")
-
-    使用者还可添加自己的映射函数::
-
-        def MyMapper(pin_name):
-           if pin_name == "LeftMotorDir":
-               return pyb.Pin.cpu.PB15
-
-        pyb.Pin.mapper(MyMapper)
-
-    所以，若您要调用： ``pyb.Pin("LeftMotorDir", pyb.Pin.OUT_PP)``
-    则 ``"LeftMotorDir"`` 直接传递到映射函数。
-
-    简而言之，以下顺序决定了名字如何被映射成一个引脚编号：
-
-    1. 直接指定一个引脚对象
-    2. 用户提供映射函数
-    3. 用户提供映射（对象必须是可用的关键字）
-    4. 提供一个与板上引脚匹配的字符串
-    5. 提供一个与CPU端口/引脚匹配的字符串
-
-    您可以设置 ``pyb.Pin.debug(True)`` ，以获得一些关于一个特定对象如何映射到一个引脚的调试信息。
-
-    当引脚启用了 ``Pin.PULL_UP`` 或 ``Pin.PULL_DOWN`` 模式，该引脚有一个有效的40k欧姆的电阻把它牵引至3V3或GND。
-
-    每当在GPIO引脚中发现下降沿，该回调将被执行。注意：机械按钮有抖动，按下或松开一个开关通常会产生多次电平变化。
-
-    详细解释与消除抖动的具体方法，请参见: http://www.eng.utah.edu/~cs5780/debouncing.pdf
-
-    所有引脚对象都通过引脚映射器来生成一个GPIO引脚。
 
 
 构造函数
@@ -125,7 +72,6 @@ Pin类 – 控制I/O 引脚
 
    创建一个与id关联的新的注脚对象。若给定其他参数，则用来初始化引脚。详见 `pin.init()` 。
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     Class methods
     -------------
@@ -146,7 +92,6 @@ Pin类 – 控制I/O 引脚
 方法
 -------
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     .. method:: Pin.init(mode, pull=Pin.PULL_NONE, af=-1)
 
@@ -178,7 +123,6 @@ Pin类 – 控制I/O 引脚
      - 若无参数，返回0或1取决于引脚的逻辑级别。
      - 给定 ``value`` ，设置引脚的逻辑级别。 ``value`` 可为任何可转换成布尔值的值。若转换为 ``True`` ，引脚设置为高；否则设置为低。
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     .. method:: Pin.__str__()
 
@@ -223,7 +167,6 @@ Pin类 – 控制I/O 引脚
 常量
 ---------
 
-.. only:: port_pyboard  or port_openmvcam or port_moxingstm32f4
 
     .. data:: Pin.AF_OD
 
@@ -261,7 +204,6 @@ Pin类 – 控制I/O 引脚
 
        在引脚上启用上拉电阻。
 
-.. only:: port_pyboard
 
     class PinAF -- 引脚替代函数
     ======================================
@@ -287,41 +229,6 @@ Pin类 – 控制I/O 引脚
     或::
 
        pin = pyb.Pin(pyb.Pin.board.X3, mode=pyb.Pin.AF_PP, af=1)
-
-    方法
-    -------
-
-    .. method:: pinaf.__str__()
-
-       返回一个描述替代函数的字符串。
-
-    .. method:: pinaf.index()
-
-       返回替代函数索引。
-
-    .. method:: pinaf.name()
-
-       返回替代函数的名称。
-
-    .. method:: pinaf.reg()
-
-       返回与分配给此替代函数的外设相关的基址寄存器。例如，若替代函数为TIM2_CH3，则将返回stm.TIM2。
-
-.. only:: port_openmvcam
-
-    class PinAF -- 引脚替代函数
-    ======================================
-
-    引脚意为微处理器上的物理引脚。每个引脚都可有一系列函数（GPIO、I2C SDA等）。每个AF引脚对象都代表一个引脚的特定函数。
-
-    用法示例::
-
-        p0 = pyb.Pin.board.P0
-        p0_af = p0.af_list()
-
-    现在p0_af将包含一个在P0引脚上可用的PinAF对象的数组。
-
-    通常，每个外设都会自动配置af，但有时在多个引脚上可以使用相同的功能，并且需要更多的控制。
 
     方法
     -------
