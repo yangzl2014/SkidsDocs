@@ -49,11 +49,11 @@ trailbreaker可以由电池或其他外部电源供电。
 
 mycropython 的板子，链接电脑是可能会出现Pyboard Virtual Comm Port in FS Mode链接错误，无法做程序运行。
   - 首先进入设备管理器，右击选择“更新驱动程序软件”
-  
+
 .. image:: img/pyberror.png
   :alt: trailbreaker with LCD skin
   :width: 250px
-  
+
   - 然后"浏览计算机以查找驱动程序软件（R）"并浏览选择micropython的磁盘TPFlash。
 .. image:: img/pybsetup1.png
   :alt: trailbreaker with LCD skin
@@ -62,11 +62,11 @@ mycropython 的板子，链接电脑是可能会出现Pyboard Virtual Comm Port 
 .. image:: img/pybsetup2.png
   :alt: trailbreaker with LCD skin
   :width: 250px
-  
+
 .. image:: img/pybsetup3.png
   :alt: trailbreaker with LCD skin
   :width: 250px
-  
+
   - 如果安装驱动的时候提示第三方INF不包含数字签名信息，需要在系统中禁用驱动程序的强制签名
   - 点击通知，找到并进入“所有设置”
   - 在所有设置中找到并进入“更新和安全”
