@@ -55,6 +55,7 @@ mycropython 的板子，链接电脑是可能会出现Pyboard Virtual Comm Port 
   :width: 250px
 
   - 然后"浏览计算机以查找驱动程序软件（R）"并浏览选择micropython的磁盘TPFlash。
+  
 .. image:: img/pybsetup1.png
   :alt: trailbreaker with LCD skin
   :width: 250px
@@ -68,12 +69,20 @@ mycropython 的板子，链接电脑是可能会出现Pyboard Virtual Comm Port 
   :width: 250px
 
   - 如果安装驱动的时候提示第三方INF不包含数字签名信息，需要在系统中禁用驱动程序的强制签名
+  
   - 点击通知，找到并进入“所有设置”
+  
   - 在所有设置中找到并进入“更新和安全”
+  
   - 找到恢复，点击“高级启动”下的“立即重启”，重启电脑。
+  
   - 重启后选择“疑难解答”。
+  
   - 选择“高级选项”
+  
   - 选择“启动设置”。
+  
   - 点击“重启”。
+  
   - 按提示输入“7”禁用驱动程序强制签名。完成后重新执行驱动更新可以完成磁盘的加载
   
