@@ -4,7 +4,6 @@
 ADC类 – 模数转换
 =========================================
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     使用::
 
@@ -23,8 +22,6 @@ ADC类 – 模数转换
 ------------
 
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
-
     .. class:: pyb.ADC(pin)
 
        创建一个与给定引脚相关联的ADC对象，然后您就可在引脚中读取模拟值。
@@ -32,7 +29,6 @@ ADC类 – 模数转换
 方法
 -------
 
-.. only:: port_pyboard
 
     .. method:: ADC.read()
 
@@ -141,7 +137,6 @@ ADC类 – 模数转换
 ADCAll对象
 -----------------
 
-.. only:: port_pyboard or port_openmvcam or port_moxingstm32f4
 
     这一实例将所有ADC引脚转换为模拟输入。原始的MCU温度、VREF和VBAT数据可分别在ADC通道16、17和18中访问。需要适度的缩放。芯片上的温度传感器绝对精度不高，只适用于检测温度变化。
 
