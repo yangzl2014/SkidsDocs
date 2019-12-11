@@ -28,6 +28,16 @@ Skids 参考
    :maxdepth: 1
    
    skids/index.rst
+   
+-----------------
+
+NEUIBIT 参考
+-----------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   blockly/index.rst
 
 -----------------
 
