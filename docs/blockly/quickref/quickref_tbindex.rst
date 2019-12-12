@@ -1,6 +1,6 @@
 .. _quickref-index:
 
-NEUIBIT Trailbreaker积木块的简介
+NEUAIBIT Trailbreaker积木块的简介
 ------------------------------------
 
 .. toctree::

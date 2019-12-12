@@ -31,7 +31,7 @@ Skids 参考
    
 -----------------
 
-NEUIBIT 参考
+NEUAIBIT 参考
 -----------------
 
 .. toctree::

@@ -1,6 +1,6 @@
 .. _quickref-index:
 
-NEUIBIT SKIDS积木块的简介
+NEUAIBIT SKIDS积木块的简介
 ------------------------------------
 
 .. toctree::
