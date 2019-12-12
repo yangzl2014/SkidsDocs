@@ -1,29 +1,29 @@
 .. _general-index:
 
-NEUIBIT简介
+NEUAIBIT简介
 ============================
-- NEUIBIT图形化页面
+- NEUAIBIT图形化页面
 .. image:: img/neuibit.png
     :alt: The front of neuibit
     :width: 640px
 	
-- NEUIBIT Python在线编程页面
+- NEUAIBIT Python在线编程页面
 .. image:: img/neuibitpy.png
     :alt: The front of neuibit
     :width: 640px
 
-什么是NEUIBIT
+什么是NEUAIBIT
 ----------------------------
 
-- NEUIBIT是由沈阳牛艾科技有限公司自主研发的用在教学领域的图形化积木编程工具和在线Python代码编程工具。
+- NEUAIBIT是由沈阳牛艾科技有限公司自主研发的用在教学领域的图形化积木编程工具和在线Python代码编程工具。
 - 采用Google Blockly做为软件的基础框架，并通过图形自动生成Python代码，可以让Python编程教学变得更简单和生动。
 - 提高了学生的学习兴趣，让学生在较短的时间内学会积木编程，和Python语法，降低了物联网、嵌入式、软件工程、电子工程、通信等各类专业的教学入门难度。
 
-NEUIBIT官方主页
+NEUAIBIT官方主页
 ----------------------------
-`NEUIBIT <http://neuibit.neui.net/>`_
+`NEUAIBIT <http://neuibit.neui.net/>`_
 
-NEUIBIT结构说明
+NEUAIBIT结构说明
 ----------------------------
 
 - 如下图所示
