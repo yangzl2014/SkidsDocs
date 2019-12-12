@@ -1,6 +1,6 @@
 .. _quickref-index:
 
-NEUIBIT的快速参考
+NEUAIBIT的快速参考
 ------------------------------------
 
 .. toctree::
