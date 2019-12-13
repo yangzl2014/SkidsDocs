@@ -12,4 +12,5 @@ NEUAIBIT参考
 
    general/general_index.rst
    quickref/quickref_index.rst
+   practice/quickref_index.rst
 
