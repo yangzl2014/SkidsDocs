@@ -21,7 +21,7 @@ NEUAIBIT简介
 
 NEUAIBIT官方主页
 ----------------------------
-`NEUAIBIT <http://neuibit.neui.net/>`_
+`NEUAIBIT <http://neuaibit.neui.net/>`_
 
 NEUAIBIT结构说明
 ----------------------------
