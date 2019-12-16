@@ -136,4 +136,4 @@ Skids 计算器实例讲解
     :width: 480px
   
 .. image:: img/cal12.png
-    :width: 480px
+    :width: 490px

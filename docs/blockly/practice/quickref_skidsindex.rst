@@ -10,4 +10,5 @@ NEUAIBIT SKIDS实例
    neuibitskidshelloworld.rst
    neuibitskidcount.rst
    neuibitskidcal.rst
+   neuibitskidspmd.rst
 
