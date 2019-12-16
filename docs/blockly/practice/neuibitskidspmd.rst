@@ -116,3 +116,7 @@ Skids 跑马灯实例讲解
     :width: 480px
 	
 程序效果
+
+	
+.. image:: img/skpmd.gif
+
