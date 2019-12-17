@@ -11,4 +11,5 @@ NEUAIBIT SKIDS实例
    neuibitskidcount.rst
    neuibitskidcal.rst
    neuibitskidspmd.rst
+   neuibitskidsturtle.rst
 

@@ -1,4 +1,4 @@
-.. _neuibitintro:
+.. _neuibitcal:
 
 Skids 计算器实例讲解
 ============================

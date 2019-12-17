@@ -1,4 +1,4 @@
-.. _neuibitintro:
+.. _neuibitpmd:
 
 Skids 跑马灯实例讲解
 ============================
