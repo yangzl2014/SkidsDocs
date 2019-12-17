@@ -12,4 +12,5 @@ NEUAIBIT SKIDS实例
    neuibitskidcal.rst
    neuibitskidspmd.rst
    neuibitskidsturtle.rst
+   neuibitskidsweather.rst
 
