@@ -5,7 +5,6 @@ NEUAIBIT Trailbreaker积木块的简介
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    neuibtbpybintro.rst
    neuibtbledintro.rst

@@ -1,4 +1,4 @@
-.. _neuibitintro:
+.. _neuibittbledintro:
 
 Trailbreaker LED积木块简介
 ============================

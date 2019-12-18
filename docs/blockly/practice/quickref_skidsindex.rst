@@ -1,11 +1,10 @@
-.. _quickref-index:
+.. _quickref-skidsindex:
 
 NEUAIBIT SKIDS实例
 ------------------------------------
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    neuibitskidshelloworld.rst
    neuibitskidcount.rst
