@@ -9,3 +9,5 @@ NEUAIBIT Trailbreaker实例
    neuibittbled.rst
    neuibittbdht.rst
    neuibittbstepper.rst
+   neuibittbpiano.rst
+   neuibittbscandrv.rst
