@@ -1,15 +1,13 @@
 .. _neuibitintro:
 
-Trailbreaker 点阵屏实例讲解
+Trailbreaker 体温计实例讲解
 ============================
 
-- 如下图显示点阵屏实例的最终程序
+- 如下图显示体温计实例的最终程序
 
-.. image:: img/tbscan01.png
-    :width: 520px
+.. image:: img/tbtiwen.png
+    :width: 1024px
 
-.. image:: img/tbscan02.png
-    :width: 520px
 	
 本章可以学到什么
 ----------------------------
@@ -19,7 +17,9 @@ Trailbreaker 点阵屏实例讲解
   + 积木块的基本操作
   + 变量积木块的使用
   + 循环积木块的使用
+  + 条件积木木块的使用
   + 引脚积木块的使用
+  + 函数积木块的使用
   + 编程的思路
 
 使用到的积木块列表
@@ -33,6 +33,14 @@ Trailbreaker 点阵屏实例讲解
 |                              |                        |
 |                              |代码：while True:       |
 +------------------------------+------------------------+
+
++------------------------------+---------------------------+
+| .. image:: img/if.png        |条件语句                   |
+|    :width: 140px             |                           |
+|                              |代码：if False:            |
+|                              |                           |
+|                              |         pass              |
++------------------------------+---------------------------+
 
 - Trailbreaker PIN功能块
 
@@ -51,37 +59,21 @@ Trailbreaker 点阵屏实例讲解
 
 实现思路
 ----------------------------
-首先获取行列的引脚(X2,X1,X3,X4,X5,X6,X8,X7)和(Y2,Y1,Y3,Y4,Y5,Y6,Y8,Y7),首先拉高所有行和列的电平。为了让每个灯能亮需要拉低对应
-的引脚电平，所以通过循环先拉低列引脚电平，再嵌套一个循环不断拉低拉高行引脚电平保证每个灯的闪烁。
+创建报警灯引脚和ADC引脚对象，读取到模拟数据后根据对应算法计算出体温。原理说明参考
+`体温原理说明 <https://skidsdocs.readthedocs.io/zh_CN/latest/source/temperature.html>`_
 
 
 操作步骤
 ----------------------------
 
-创建行列的PIN对象
+创建报警灯引脚和ADC引脚对象
   
 .. image:: img/tbscan1.png
     :width: 520px
 	
-.. image:: img/tbscan2.png
-    :width: 520px
+定义函数根据获取的模拟数据计算出体温
 
-保存每个引脚对象到数组中
-
-.. image:: img/tbscan3.png
-    :width: 520px
-	
-.. image:: img/tbscan4.png
-    :width: 520px
-
-拉高所有行和列的电平
-
-.. image:: img/tbscan5.png
-    :width: 520px
-
-使用循环嵌套先拉低列引脚再不断变换行引脚的高低电平实现点陈led的常亮，最后拉高所有列引脚结束程序
-  
-.. image:: img/tbscan6.png
+.. image:: img/tbtiwen.png
     :width: 520px
 
 
@@ -92,38 +84,26 @@ Trailbreaker 点阵屏实例讲解
 	import pyb
 
 
+	def readTemp():
+	  val = adc.read()
+	  vin = (val * 3.3) / 4095
+	  vtemp = vin / 2.5
+	  rtemp = (vtemp * 14.7) / (3.3 - vtemp)
+	  ctemp = a * rtemp + b
+	  if ctemp > 38:
+		led.value(1)
+	  else:
+		led.value(0)
 
-	x1 = Pin('X2',Pin.OUT_PP);
-	x2 = Pin('X1',Pin.OUT_PP);
-	x3 = Pin('X3',Pin.OUT_PP);
-	x4 = Pin('X4',Pin.OUT_PP);
-	x5 = Pin('X5',Pin.OUT_PP);
-	x6 = Pin('X6',Pin.OUT_PP);
-	x7 = Pin('X8',Pin.OUT_PP);
-	x8 = Pin('X7',Pin.OUT_PP);
-	y1 = Pin('Y2',Pin.OUT_PP);
-	y2 = Pin('Y1',Pin.OUT_PP);
-	y3 = Pin('Y3',Pin.OUT_PP);
-	y4 = Pin('Y4',Pin.OUT_PP);
-	y5 = Pin('Y5',Pin.OUT_PP);
-	y6 = Pin('Y6',Pin.OUT_PP);
-	y7 = Pin('Y8',Pin.OUT_PP);
-	y8 = Pin('Y7',Pin.OUT_PP);
-	row = [x1, x2, x3, x4, x5, x6, x7, x8]
-	column = [y1, y2, y3, y4, y5, y6, y7, y8]
-	for i in row:
-	  i.value(1)
-	for i in column:
-	  i.value(1)
-	loops = 0
-	while (loops < 300):
-	  for i in column:
-		i.value(0)
-	  for i in row:
-		i.value(0)
-		pyb.delay(2);
-		i.value(1)
-	  loops = loops + 1
-	for i in column:
-	  i.value(1)
+
+	led = Pin('X3',Pin.OUT_PP);
+	pin_adc = Pin('X4');
+	adc = pyb.ADC(pin_adc);
+	val = adc.read()
+	a = (50 - 25) / (3.603 - 10)
+	b = 25 - 10 / a
+	while True:
+	  readTemp()
+	  pyb.delay(1000);
+
 
