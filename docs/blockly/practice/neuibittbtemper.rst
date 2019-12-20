@@ -68,7 +68,7 @@ Trailbreaker 体温计实例讲解
 
 创建报警灯引脚和ADC引脚对象
   
-.. image:: img/tbscan1.png
+.. image:: img/tbtiwen1.png
     :width: 520px
 	
 定义函数根据获取的模拟数据计算出体温
