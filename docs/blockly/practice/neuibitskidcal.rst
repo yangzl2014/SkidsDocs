@@ -121,7 +121,7 @@ Skids 计算器实例讲解
 .. image:: img/cal8.png
     :width: 520px
   
-.. image:: img/cal01.png
+.. image:: img/cal13.png
     :width: 520px
 	
 	
