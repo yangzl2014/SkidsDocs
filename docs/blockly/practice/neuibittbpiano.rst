@@ -154,7 +154,7 @@ Trailbreaker 电子琴实例讲解
 	  for i in [0,1,2,3]:
 		a = row[i]
 		a.value(0)
-		for i in [0,1,2,3]:
+		for k in [0,1,2,3]:
 		  if k != i:
 			b = row[k]
 			b.value(1)
