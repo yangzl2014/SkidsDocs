@@ -101,7 +101,7 @@ Trailbreaker 体温计实例讲解
 	adc = pyb.ADC(pin_adc);
 	val = adc.read()
 	a = (50 - 25) / (3.603 - 10)
-	b = 25 - 10 / a
+	b = 25 - 10 * a
 	while True:
 	  readTemp()
 	  pyb.delay(1000);
